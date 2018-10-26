@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OneTech</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="OneTech shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../static/styles/bootstrap4/bootstrap.min.css">
+<link href="../static/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="../static/plugins/slick-1.8.0/slick.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/main_styles.css">
+<link rel="stylesheet" type="text/css " href="../static/styles/responsive.css">
+
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body{
+			font: 1rem/1.6 "Helvetica", Sans-serif;
+		}
+
+		main{
+			width: 90%;
+			margin:50px auto;
+
+			-moz-column-width: 220px;
+			-webkit-column-width: 220px;
+			column-width: 220px;
+
+			-moz-column-count: 3;
+			-webkit-column-count: 3;
+			column-count: 3;
+
+			-moz-column-gap: 10px;
+			-webkit-column-gap: 10px;
+			column-gap: 10px;
+
+		}
+
+		a[title] figure img{
+			width: 280px;
+			height: 180px;
+			margin-top:1rem;
+		}
+
+		main a[title]{
+			text-decoration: none;
+			padding: 1rem;
+			color:#424242;
+			box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
+			display: inline-block;
+
+			margin-bottom:20px;
+
+			transition: all .3s cubic-bezier(0.25, .8, .25, 1);
+		}
+
+		main:hover a[title]:not(:hover){
+			opacity: .6;
+		}
+
+		a[title]:hover{
+			box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .20);
+
+		}
+</style>
+
+
+
+</head>
+
+<body>
+
+<button class="btn btn-success" data-target="#mymodal"
+								          data-toggle="modal">SignUp</button>
+								            <div class="modal" id="mymodal">
+								                <div class="modal-dialog">
+								                    <div class="modal-content">
+								                        <div class="modal-header">
+								                            <h3 class="text-center text-primary">SignUp</h3>
+								                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+								                            <form form id="upload-form" action="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">
+
+                                                            <div class="form-group" style="text-align: center">
+                                                            <label><i class="fa fa-user fa-2x"></i> Name: </label>
+                                                             <input type="text" name="name" placeholder="Enter Name" class="form-control" value={{request.form.name}}>
+
+                                                            </div>
+                                                            <div class="form-group" style="text-align: center">
+                                                            <label><i class="fa fa-user fa-2x"></i> User Name: </label>
+                                                             <input type="text" name="username" placeholder="Enter Username" class="form-control" value={{request.form.username}}>
+
+                                                            </div>
+                                                              <div class="form-group" style="text-align: center">
+                                                            <label><i class="fa fa-envelope fa-2x"></i> Email: </label>
+                                                             <input type="text" name="email" placeholder="Enter Email" class="form-control" value={{request.form.email}}>
+
+                                                            </div>
+                                                            <div class="form-group" style="text-align: center">
+                                                            <label><i class="fa fa-lock fa-2x"></i> Password: </label>
+                                                             <input type="password" name="password" placeholder="Enter Username" class="form-control" value={{request.form.password}}>
+
+                                                            </div>
+
+                                                            <div class="form-group" style="text-align: center">
+                                                            <label><i class="fa fa-user fa-2x"></i> Confirm Password: </label>
+                                                             <input type="password" name="cpassword" placeholder="Enter Username" class="form-control" value={{request.form.confirm}}>
+
+                                                            </div>
+
+                                                            <div class="form-group" style="text-align: center">
+                                                            <label><i class="fa fa-mobile fa-2x"></i> Mobile No: </label>
+                                                             <input type="text" name="mobileno" placeholder="Enter Username" class="form-control" value={{request.form.mobileno}}>
+
+                                                            </div>
+
+
+
+                                                              <div class="form-group" style="text-align: center">
+                                                             <strong>Files:</strong><br>
+                                                               <input id="file-picker" type="file" name="file" accept="image/*" multiple>
+                                                               <div id="msg"></div>
+                                                                </div>
+                                                            <p style="text-align: center"><input type="submit" class="btn btn-primary" value="Submit"></p>
+                                                          </form>
+
+
+                                                        </div>
+                                                     </div>
+                                                </div>
+
+								            </div>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col d-flex flex-row">
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/phone.png" alt=""></div>+38 068 005 3570</div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+						<div class="top_bar_content ml-auto">
+							<div class="top_bar_menu">
+								<ul class="standard_dropdown top_bar_dropdown">
+									<li>
+										<a href="#">English<i class="fas fa-chevron-down"></i></a>
+										<ul>
+											<li><a href="#">Italian</a></li>
+											<li><a href="#">Spanish</a></li>
+											<li><a href="#">Japanese</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+
+
+							<div class="top_bar_user">
+								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
+
+
+								<div><a href="/registertran">Register</a></div>
+								<div><a href="/login">Sign in</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Main -->
+
+		<div class="header_main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Logo -->
+					<div class="col-lg-2 col-sm-3 col-3 order-1">
+						<div class="logo_container">
+							<div class="logo"><a href="#">SuperShop</a></div>
+						</div>
+					</div>
+
+					<!-- Search -->
+					<div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+						<div class="header_search">
+							<div class="header_search_content">
+								<div class="header_search_form_container">
+									<form action="#" class="header_search_form clearfix">
+										<input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+										<div class="custom_dropdown">
+											<div class="custom_dropdown_list">
+												<span class="custom_dropdown_placeholder clc">All Categories</span>
+												<i class="fas fa-chevron-down"></i>
+												<ul class="custom_list clc">
+													<li><a class="clc" href="#">All Categories</a></li>
+													<li><a class="clc" href="#">Computers</a></li>
+													<li><a class="clc" href="#">Laptops</a></li>
+													<li><a class="clc" href="#">Cameras</a></li>
+													<li><a class="clc" href="#">Hardware</a></li>
+													<li><a class="clc" href="#">Smartphones</a></li>
+												</ul>
+											</div>
+										</div>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Wishlist -->
+					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
+								<div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
+								<div class="wishlist_content">
+									<div class="wishlist_text"><a href="#">Wishlist</a></div>
+									<div class="wishlist_count">115</div>
+								</div>
+							</div>
+
+							<!-- Cart -->
+							<div class="cart">
+								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+									<div class="cart_icon">
+										<img src="images/cart.png" alt="">
+										<div class="cart_count"><span>10</span></div>
+									</div>
+									<div class="cart_content">
+										<div class="cart_text"><a href="/cart">Cart</a></div>
+										<div class="cart_price">$85</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Navigation -->
+
+		<nav class="main_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+
+						<div class="main_nav_content d-flex flex-row">
+
+							<!-- Categories Menu -->
+
+							<div class="cat_menu_container">
+								<div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+									<div class="cat_burger"><span></span><span></span><span></span></div>
+									<div class="cat_menu_text">categories</div>
+								</div>
+
+								<ul class="cat_menu">
+									<li><a href="#">Breads, Biscuits & Cakes <i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<li><a href="#">Chocolates & Candies<i class="fas fa-chevron-right"></i></a></li>
+									<li class="hassubs">
+										<a href="#">Hardware<i class="fas fa-chevron-right"></i></a>
+										<ul>
+											<li class="hassubs">
+												<a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>
+												<ul>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
+												</ul>
+											</li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
+										</ul>
+									</li>
+									<li><a href="#">Life Styles<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Bags<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Meat & Fish<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Fruits & Vegetables<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Home Care & Cleaning<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Milk & Diary Products<i class="fas fa-chevron-right"></i></a></li>
+								</ul>
+							</div>
+
+							<!-- Main Nav Menu -->
+
+							<div class="main_nav_menu ml-auto">
+								<ul class="standard_dropdown main_nav_dropdown">
+									<li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li class="hassubs">
+										<a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
+										<ul>
+											<li>
+												<a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
+												<ul>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+												</ul>
+											</li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>
+										<ul>
+											<li>
+												<a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
+												<ul>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+												</ul>
+											</li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
+										<ul>
+											<li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+										</ul>
+									</li>
+									<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+								</ul>
+							</div>
+
+							<!-- Menu Trigger -->
+
+							<div class="menu_trigger_container ml-auto">
+								<div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+									<div class="menu_burger">
+										<div class="menu_trigger_text">menu</div>
+										<div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Menu -->
+
+		<div class="page_menu">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+
+						<div class="page_menu_content">
+
+							<div class="page_menu_search">
+								<form action="#">
+									<input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
+								</form>
+							</div>
+							<ul class="page_menu_nav">
+								<li class="page_menu_item has-children">
+									<a href="#">Language<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Currency<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item">
+									<a href="#">Home<i class="fa fa-angle-down"></i></a>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
+										<li class="page_menu_item has-children">
+											<a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
+											<ul class="page_menu_selection">
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+											</ul>
+										</li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
+								<li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>
+							</ul>
+
+							<div class="menu_contact">
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570</div>
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- Banner -->
+
+	<div class="banner">
+
+		<div class="banner_background" style="background-image:url(../static/images/banner_background.jpg)"></div>
+		<div class="container fill_height">
+			<div class="row fill_height">
+				<div class="banner_product_image"><img src="images/banner_product.png" alt=""></div>
+				<div class="col-lg-5 offset-lg-4 fill_height">
+					<div class="banner_content">
+						<h1 class="banner_text">new era of smartphones</h1>
+						<div class="banner_price"><span>$530</span>$460</div>
+						<div class="banner_product_name">Apple Iphone 6s</div>
+						<div class="button banner_button"><a href="#">Shop Now</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+       <main>
+
+	<div>
+    <a title="Post">
+			<article>
+				<figure>
+					<img src="/static/images/lifestyle.jpg">
+					<figcaption>Life Style</figcaption>
+				</figure>
+			</article>
+		</a>
+
+	</div>
+
+	<div>
+    <a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/drinks.jpeg">
+					<figcaption>Drinks</figcaption>
+				</figure>
+
+			</article>
+		</a>
+
+
+		</div>
+		<div>
+    <a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/chocolate.jpg">
+					<figcaption>Chocolate & Candies</figcaption>
+				</figure>
+			</article>
+		</a>
+
+
+		</div>
+		<div>
+    <a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/meat.jpg">
+					<figcaption>Meat</figcaption>
+				</figure>
+			</article>
+		</a>
+
+
+		</div>
+		<div>
+    <a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/homecare.jpg">
+					<figcaption>Home Care</figcaption>
+				</figure>
+			</article>
+		</a>
+
+
+		</div>
+		<div>
+    <a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/biscuits.jpg">
+					<figcaption>Biscuits</figcaption>
+				</figure>
+			</article>
+		</a>
+
+
+		</div>
+		<div>
+    <a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/cake.jpg">
+					<figcaption>Breads</figcaption>
+				</figure>
+			</article>
+		</a>
+
+
+		</div>
+		<div>
+    <a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/snacks.jpg">
+					<figcaption>Snacks & Instants</figcaption>
+				</figure>
+			</article>
+	</a>
+	<a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/fruits.jpg">
+					<figcaption>Fruits</figcaption>
+				</figure>
+			</article>
+	</a>
+	<a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/single_4.jpg">
+					<figcaption>Fish</figcaption>
+				</figure>
+			</article>
+	</a>
+	<a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/single_4.jpg">
+					<figcaption>Vegetables</figcaption>
+				</figure>
+			</article>
+	</a>
+	<a title="Post">
+
+			<article>
+				<figure>
+					<img src="/static/images/single_4.jpg">
+					<figcaption>Baby Food</figcaption>
+				</figure>
+			</article>
+	</a>
+
+
+		</div>
+		</main>
+		</div>
+
+
+
+
+</div>
+
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/styles/bootstrap4/popper.js"></script>
+<script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../static/plugins/greensock/TweenMax.min.js"></script>
+<script src="../static/plugins/greensock/TimelineMax.min.js"></script>
+<script src="../static/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="../static/plugins/greensock/animation.gsap.min.js"></script>
+<script src="../static/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../static/plugins/slick-1.8.0/slick.js"></script>
+<script src="../static/plugins/easing/easing.js"></script>
+<script src="../static/js/custom.js"></script>
+</body>
+
+</html>
