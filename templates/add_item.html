@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Super Shop</title>
+<title>OneTech</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -37,9 +37,14 @@
 
 							</div>
 							<div class="top_bar_user">
-								<div class="user_icon"><img src="images/user.svg" alt=""></div>
-								<div><a href="#">Register</a></div>
-								<div><a href="#">Sign in</a></div>
+								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
+								{% if session.logged_in %}
+                                <div><a href="/registertran">Register</a></div>
+                                <div><a href="/logout">Logout</a></div>
+                                  {% else %}
+                                  <div><a href="/registertran">Register</a></div>
+						    		<div><a href="/login">Sign in</a></div>
+                                 {% endif %}
 							</div>
 						</div>
 					</div>
@@ -49,29 +54,47 @@
 	</div>
 </div>
 
-<div class="container">
-      {% include 'includes/_messages.html' %}
-    </div>
+ <img src="../static/images/image.jpg">
 
-        <img src="../static/images/imagenew.jpg">
 
-     <div class="login-box" style="margin-top: -295px">
-       <img src="../static/images/avatar.png" class="avatar">
+
+
+ <!--gg-->
+
+     <div class="signup-box" style="margin-top: -250px">
         {% block body %}
-        <h1>Login Here</h1>
-          <form action="" method="POST">
-            <p>Username</p>
-              <input type="text" name="username" placeholder="Enter Username" class="form-control" value={{request.form.username}}>
+        <h1>Add Item</h1>
+          <form class="form-group" id="upload-form" action="{{ url_for('add_item') }}" method="POST" enctype="multipart/form-data">
+            <p>Item Name</p>
+            <input type="text" name="Item_Name" placeholder="Enter Item Name" class="form-control"  value="{{request.form.Item_Name}}">
+              <p>Category</p>
+              <select style="width: 180px;height: 25px;margin-top: 15px" name="Category">
+                  <option>Life_Style</option>
+                  <option>Drinks</option>
+                  <option>Chocolate_&_Candies</option>
+                  <option>Meat</option>
+                  <option>Home_Care</option>
+                  <option>Biscuits</option>
+                  <option>Breads</option>
+                  <option>Snacks_&_Instants</option>
+                  <option>Fruits</option>
+                  <option>Fish</option>
+                  <option>Vegetables</option>
+                  <option>Baby_Food</option>
+              </select>
+              <p>Price</p>
+            <input type="text" name="price" placeholder="Enter Price" class="form-control"  value="{{request.form.price}}">
+              <p style="margin-top: 15px">Description</p>
+            <input type="text" name="description" placeholder="Enter Description" class="form-control"  value="{{request.form.description}}">
 
-            <p>Password</p>
-              <input type="password" name="password" placeholder="Enter Password" class="form-control" value={{request.form.password}}>
-
-            <input type="submit" name="submit" value="Login">
+                   <strong>Files:</strong><br>
+                    <input id="file-picker" type="file" name="file" accept="image/*" multiple>
+                    <div id="msg"></div>
+            <input type="submit" name="submit" value="Post" style="margin-top: 15px">
             </form>
-              {% endblock %}
+          {% endblock %}
 
 </div>
-
 <script src="../static/js/jquery-3.3.1.min.js"></script>
 <script src="../static/styles/bootstrap4/popper.js"></script>
 <script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
@@ -88,7 +111,3 @@
 </body>
 
 </html>
-
-
-
-

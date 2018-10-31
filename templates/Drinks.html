@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_styles.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_responsive.css">
 
+
 <script type="text/javascript">
    function getvalue(Id) {
        console.log(Id.innerText);
@@ -91,19 +92,12 @@ body{
 					<div class="col d-flex flex-row">
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_menu">
-
+								
 							</div>
 							<div class="top_bar_user">
-								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
-
-								{% if session.logged_in %}
-                                <div><a href="/registertran">Register</a></div>
-                                <div><a href="/logout">Logout</a></div>
-                                  {% else %}
-                                  <div><a href="/registertran">Register</a></div>
-						    		<div><a href="/login">Sign in</a></div>
-                                 {% endif %}
-
+								<div class="user_icon"><img src="images/user.svg" alt=""></div>
+								<div><a href="/registertran">Register</a></div>
+								<div><a href="/login">Sign in</a></div>
 							</div>
 						</div>
 					</div>
@@ -171,7 +165,7 @@ body{
 										<div class="cart_count"><span>10</span></div>
 									</div>
 									<div class="cart_content">
-										<div class="cart_text"><a href="/cart">Cart</a></div>
+										<div class="cart_text"><a href="#">Cart</a></div>
 										<div class="cart_price">$85</div>
 									</div>
 								</div>
@@ -233,7 +227,7 @@ body{
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
 									<li class="hassubs">
 										<a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
 										<ul>
@@ -390,163 +384,38 @@ body{
 
 
     <div id="content">
+
+      <p style="align-content: center"><h1>Drinks</h1></p>
        <main>
+      <div>
+      {% for d in li %}
+        <a title="Post">
 
-	<div>
-    <a title="Post">
-			<article onclick="getvalue(this)">
-			<p>Life_Style</p>
-				<figure>
-					<img src="/static/images/lifestyle.jpg">
-					<!--<figcaption>Life Style</figcaption>-->
+			<article  onclick="getvalue(this)">
+
+                {% for row in data[d] %}
+                    {% if row==data[d][0] %}
+                     <p>Id : {{data[d][0]}}</p>
+                     {% elif row==data[d][1] %}
+                     <p>Item Name : {{ data[d][1]}}</p>
+                     {% elif row==data[d][2] %}
+                     <p>Category : {{ data[d][2]}}</p>
+                     {% elif row==data[d][3] %}
+                     <p>Price : {{ data[d][3]}}</p>
+                     {% endif%}
+                {% endfor %}
+                
+                <figure>
+
+					<img src="{{url_for('send_image3',filename = img[d-l])}}">
 				</figure>
+				
 			</article>
 		</a>
-
-	</div>
-
-	<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Drinks</p>
-				<figure>
-					<img src="/static/images/drinks.jpeg">
-					<!--<figcaption>Drinks</figcaption>-->
-				</figure>
-
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Chocolate_&_Candies</p>
-				<figure>
-					<img src="/static/images/chocolate.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Meat</p>
-				<figure>
-					<img src="/static/images/meat.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Home_Care</p>
-				<figure>
-					<img src="/static/images/homecare.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Biscuits</p>
-				<figure>
-					<img src="/static/images/biscuits.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Breads</p>
-				<figure>
-					<img src="/static/images/cake.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Snacks_&_Instants</p>
-				<figure>
-					<img src="/static/images/snacks.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fruits</p>
-				<figure>
-					<img src="/static/images/fruits.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fish</p>
-				<figure>
-					<img src="/static/images/fish.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Vegetables</p>
-				<figure>
-					<img src="/static/images/vegetables.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Baby_Food</p>
-				<figure>
-					<img src="/static/images/babyfood.jpg">
-
-				</figure>
-			</article>
-	</a>
-
-
+       {% endfor %}
 		</div>
 		</main>
-		</div>
-		</div>
+    </div>
 	<!-- Cart -->
 
 	<!--<div class="cart_section">
@@ -604,7 +473,7 @@ body{
 	</div>
 	-->
 
-
+</div>	
 
 <script src="../static/js/jquery-3.3.1.min.js"></script>
 <script src="../static/styles/bootstrap4/popper.js"></script>

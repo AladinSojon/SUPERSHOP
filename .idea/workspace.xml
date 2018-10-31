@@ -2,257 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da48900f-3c2c-4828-b61d-e5281e4c2445" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/adv_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/adv_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/adv_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/banner_2_background.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/banner_2_product.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/banner_background.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/banner_product.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/best_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/best_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/best_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/best_4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/best_5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/best_6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_9.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog_single_background.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/brands_8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/cake.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/cart.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/char_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/char_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/char_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/char_4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/contact_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/contact_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/contact_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/deals.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/drinks.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_7.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/featured_8.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/heart.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logos_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logos_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logos_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logos_4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/mail.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/mail_white.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/marker.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_10.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_9.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/new_single.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/phone.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/phone_white.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/popular_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/popular_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/popular_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/popular_4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/popular_5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/quote.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/review_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/review_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/review_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/search.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/send.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/shop_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/shop_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/shop_background.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/shopping_cart.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/single_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/single_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/single_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/single_4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/trends_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/trends_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/trends_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/trends_background.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/user.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/user.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/view_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/view_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/view_3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/view_4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/view_5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/view_6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/blog_custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/blog_single_custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/cart_custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/contact_custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-3.3.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/product_custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/regular_custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/shop_custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/Isotope/isotope.pkgd.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/OwlCarousel2-2.2.1/ajax-loader.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/OwlCarousel2-2.2.1/animate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/OwlCarousel2-2.2.1/owl.carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/OwlCarousel2-2.2.1/owl.video.play.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/easing/easing.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-brands-400.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-brands-400.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-brands-400.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-brands-400.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-brands-400.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-regular-400.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-regular-400.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-regular-400.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-regular-400.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-regular-400.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-solid-900.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-solid-900.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-solid-900.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-solid-900.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/fontawesome-free-5.0.1/webfonts/fa-solid-900.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/greensock/ScrollToPlugin.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/greensock/TimelineMax.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/greensock/TweenMax.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/greensock/animation.gsap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/jquery-ui-1.12.1.custom/jquery-ui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/jquery-ui-1.12.1.custom/jquery-ui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/parallax-js-master/parallax.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/scrollmagic/ScrollMagic.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/ajax-loader.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/fonts/slick.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/fonts/slick.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/fonts/slick.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/fonts/slick.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/slick.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/plugins/slick-1.8.0/slick.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/blog_responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/blog_single_responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/blog_single_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/blog_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/bootstrap4/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/bootstrap4/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/bootstrap4/popper.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/cart_responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/cart_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/contact_responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/contact_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/main_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/product_responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/product_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/regular_responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/regular_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/shop_responsive.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/styles/shop_styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/blog.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/blog_single.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/cart.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/contact.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/product.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registertran.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/regular.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/shop.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/Coca_cola.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/Sprite.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/Coca_Cola.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/Sprite.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/fish.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/vegetables.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/EasyHome.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/14.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/25.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/26.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/27.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/28.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/29.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/30.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/31.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/32.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/33.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/34.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/aladinsojon59.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/body.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/image_01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/nav_link_active.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/read_more.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/1.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/b.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/b.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap.bundle.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/du_booking_system.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/_notes/inner_container.jpg.mno" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/_notes/nav_link_active.jpg.mno" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/avatar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/body.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/easyhome_logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/header.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/image.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/imagenew.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/inner_container.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/nav_link_active.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/newsfeed_image.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/quote.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/read_more.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/signbg.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/td.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/login.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/metisMenu.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/metisMenu.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/pass_confirm.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/sb-admin-2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/sb-admin-2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/style_navbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/style_signup.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/des_test.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/description.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/description_main.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/edit_profile.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/favourite.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/images/homecare.jpg" afterPath="$PROJECT_DIR$/static/images/homecare.jpg" />
+      <change beforePath="$PROJECT_DIR$/supershop.py" afterPath="$PROJECT_DIR$/supershop.py" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/loginmain.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/logintransparent.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/post_ad.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/profile_main.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/registertrans.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/search_barisal.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/search_chittagong.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/search_dhaka.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/search_khulna.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/search_rajshahi.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/search_rangpur.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/search_sylhet.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
+      <change beforePath="$PROJECT_DIR$/templates/registertran.html" afterPath="$PROJECT_DIR$/templates/registertran.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -263,8 +24,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/EasyHome___Copy$EasyHome.coverage" NAME="EasyHome Coverage Results" MODIFIED="1540547284840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/SUPERSHOP$EasyHome.coverage" NAME="EasyHome Coverage Results" MODIFIED="1540547949484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SUPERSHOP$EasyHome.coverage" NAME="EasyHome Coverage Results" MODIFIED="1540572379950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/EasyHome$EasyHome.coverage" NAME="EasyHome Coverage Results" MODIFIED="1540362159675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SUPERSHOP$supershop.coverage" NAME="supershop Coverage Results" MODIFIED="1540990866577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -272,63 +34,44 @@
         <entry file="file://$PROJECT_DIR$/supershop.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
-              <caret line="205" column="46" lean-forward="false" selection-start-line="205" selection-start-column="46" selection-end-line="205" selection-end-column="46" />
+              <caret line="346" column="30" lean-forward="true" selection-start-line="346" selection-start-column="30" selection-end-line="346" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1540537611844" expanded="true" signature="1991:2093" ph="INSERT INTO registration_table... " />
-                <marker date="1540537611844" expanded="true" signature="2188:2249" ph="SELECT usern... registration_table" />
-                <marker date="1540537611844" expanded="true" signature="4371:4473" ph="INSERT INTO registration_table... " />
-                <marker date="1540537611844" expanded="true" signature="4557:4618" ph="SELECT usern... registration_table" />
-                <marker date="1540537611844" expanded="true" signature="6241:6293" ph="SELECT * FRO... registration_table" />
+                <marker date="1540990857468" expanded="true" signature="2104:2206" ph="INSERT INTO registration_table... " />
+                <marker date="1540990857468" expanded="true" signature="2301:2362" ph="SELECT usern... registration_table" />
+                <marker date="1540990857468" expanded="true" signature="4484:4586" ph="INSERT INTO registration_table... " />
+                <marker date="1540990857468" expanded="true" signature="4670:4731" ph="SELECT usern... registration_table" />
+                <marker date="1540990857468" expanded="true" signature="6354:6406" ph="SELECT * FRO... registration_table" />
+                <marker date="1540990857468" expanded="true" signature="7335:7387" ph="SELECT id,It... drinks_table" />
+                <marker date="1540990857468" expanded="true" signature="8442:8537" ph="INSERT INTO Category... " />
+                <marker date="1540990857468" expanded="true" signature="8674:8765" ph="INSERT INTO drinks_table" />
+                <marker date="1540990857468" expanded="true" signature="8917:9021" ph="INSERT INTO drinks_table" />
+                <marker date="1540990857468" expanded="true" signature="9158:9247" ph="INSERT INTO drinks_table" />
+                <marker date="1540990857468" expanded="true" signature="9389:9483" ph="INSERT INTO drinks_table" />
+                <marker date="1540990857468" expanded="true" signature="9624:9717" ph="INSERT INTO drinks_table" />
+                <marker date="1540990857468" expanded="true" signature="9856:9947" ph="INSERT INTO drinks_table" />
+                <marker date="1540990857468" expanded="true" signature="10097:10199" ph="INSERT INTO snacks_" />
+                <marker date="1540990857468" expanded="true" signature="10338:10429" ph="INSERT INTO fruits_table" />
+                <marker date="1540990857468" expanded="true" signature="10566:10655" ph="INSERT INTO fish_table" />
+                <marker date="1540990857468" expanded="true" signature="10798:10893" ph="INSERT INTO vegetables_table" />
+                <marker date="1540990857468" expanded="true" signature="11035:11129" ph="INSERT INTO baby_food_table" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/text.html">
+      <file leaf-file-name="add_item.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/add_item.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="1394">
+              <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11067">
-              <caret line="651" column="7" lean-forward="false" selection-start-line="651" selection-start-column="7" selection-end-line="651" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7650">
-              <caret line="450" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="737" selection-end-column="7" />
-              <folding>
-                <marker date="1540547123159" expanded="false" signature="18256:18281" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/contact.html">
+      <file leaf-file-name="_formhelpers.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/includes/_formhelpers.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -340,18 +83,28 @@
       <file leaf-file-name="registertran.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/registertran.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="108" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="7" />
+            <state relative-caret-position="1020">
+              <caret line="60" column="9" lean-forward="false" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/product.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8109">
-              <caret line="477" column="20" lean-forward="false" selection-start-line="477" selection-start-column="20" selection-end-line="477" selection-end-column="20" />
+            <state relative-caret-position="969">
+              <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1632">
+              <caret line="96" column="75" lean-forward="false" selection-start-line="96" selection-start-column="75" selection-end-line="96" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -380,7 +133,6 @@
         <option value="$PROJECT_DIR$/templates/registertransparent.html" />
         <option value="$PROJECT_DIR$/templates/des_test.html" />
         <option value="$PROJECT_DIR$/templates/includes/search_khulna.html" />
-        <option value="$PROJECT_DIR$/templates/description.html" />
         <option value="$PROJECT_DIR$/templates/description_main.html" />
         <option value="$PROJECT_DIR$/templates/favourite.html" />
         <option value="$PROJECT_DIR$/templates/logintransparent.html" />
@@ -398,13 +150,17 @@
         <option value="$PROJECT_DIR$/static/1.css" />
         <option value="$PROJECT_DIR$/templates/edit_profile.html" />
         <option value="$PROJECT_DIR$/templates/signup.html" />
-        <option value="$PROJECT_DIR$/templates/registertran.html" />
         <option value="$PROJECT_DIR$/templates/text.html" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/EasyHome.py" />
         <option value="$PROJECT_DIR$/templates/cart.html" />
         <option value="$PROJECT_DIR$/templates/index1.html" />
+        <option value="$PROJECT_DIR$/templates/description.html" />
+        <option value="$PROJECT_DIR$/templates/registertran.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/Drinks.html" />
+        <option value="$PROJECT_DIR$/templates/add_item.html" />
+        <option value="$PROJECT_DIR$/supershop.py" />
       </list>
     </option>
   </component>
@@ -436,6 +192,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -443,11 +200,37 @@
               <item name="SUPERSHOP" type="b2602c69:ProjectViewProjectNode" />
               <item name="SUPERSHOP" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SUPERSHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPERSHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUPERSHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPERSHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUPERSHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPERSHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUPERSHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPERSHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUPERSHOP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPERSHOP" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -456,15 +239,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aladin\PycharmProjects\SUPERSHOP\images" />
+      <recent name="C:\Users\Aladin\PycharmProjects\SUPERSHOP" />
+      <recent name="C:\Users\Aladin\PycharmProjects\SUPERSHOP\static\images" />
+      <recent name="C:\Users\Aladin\PycharmProjects\SUPERSHOP\templates" />
       <recent name="C:\Users\Aladin\PycharmProjects\EasyHome - Copy\static\images" />
-      <recent name="C:\Users\Aladin\PycharmProjects\EasyHome - Copy\templates" />
-      <recent name="C:\Users\Aladin\PycharmProjects\EasyHome - Copy" />
-      <recent name="C:\Users\Aladin\PycharmProjects\EasyHome\templates" />
-      <recent name="C:\Users\Aladin\PycharmProjects\EasyHome" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Aladin\PycharmProjects\EasyHome - Copy\static\images" />
@@ -484,7 +267,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.supershop">
     <configuration name="EasyHome" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -504,6 +287,34 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="supershop" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EasyHome" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/supershop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.EasyHome" />
+      <item index="1" class="java.lang.String" itemvalue="Python.supershop" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.supershop" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -552,14 +363,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34313726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34313726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17776097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20347957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -595,11 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/logintransparent.html" />
-    <entry file="file://$PROJECT_DIR$/templates/profile.html" />
-    <entry file="file://$PROJECT_DIR$/templates/profile_main.html" />
-    <entry file="file://$PROJECT_DIR$/templates/registertrans.html" />
-    <entry file="file://$PROJECT_DIR$/templates/search_barisal.html" />
     <entry file="file://$PROJECT_DIR$/templates/search_dhaka.html" />
     <entry file="file://$PROJECT_DIR$/templates/search_khulna.html" />
     <entry file="file://$PROJECT_DIR$/templates/search_rajshahi.html" />
@@ -625,7 +432,6 @@
     <entry file="file://$PROJECT_DIR$/images/42.jpg" />
     <entry file="file://$PROJECT_DIR$/images/body.jpg" />
     <entry file="file://$PROJECT_DIR$/templates/search_chittagong.html" />
-    <entry file="file://$PROJECT_DIR$/templates/description.html" />
     <entry file="file://$PROJECT_DIR$/templates/favourite.html" />
     <entry file="file://$PROJECT_DIR$/templates/layout.html" />
     <entry file="file://$PROJECT_DIR$/blog.html" />
@@ -646,19 +452,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5865">
-          <caret line="345" column="0" lean-forward="false" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/_navbar.html" />
     <entry file="file://$PROJECT_DIR$/templates/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,46 +477,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8109">
           <caret line="477" column="20" lean-forward="false" selection-start-line="477" selection-start-column="20" selection-end-line="477" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registertran.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html" />
     <entry file="file://$PROJECT_DIR$/static/images/homecare.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11067">
-          <caret line="651" column="7" lean-forward="false" selection-start-line="651" selection-start-column="7" selection-end-line="651" selection-end-column="7" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/cart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7650">
           <caret line="450" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="737" selection-end-column="7" />
-          <folding>
-            <marker date="1540547123159" expanded="false" signature="18256:18281" ph="..." />
-          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="469" column="4" lean-forward="false" selection-start-line="469" selection-start-column="4" selection-end-line="469" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/includes/_formhelpers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyHome/venv/Lib/site-packages/jinja2/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="410" column="0" lean-forward="false" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/Coca_Cola.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        <state relative-caret-position="1632">
+          <caret line="96" column="75" lean-forward="false" selection-start-line="96" selection-start-column="75" selection-end-line="96" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registertran.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="9" lean-forward="false" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ad_item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="44" column="12" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Drinks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="229" column="50" lean-forward="false" selection-start-line="229" selection-start-column="50" selection-end-line="229" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -727,14 +576,27 @@
     <entry file="file://$PROJECT_DIR$/supershop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
-          <caret line="205" column="46" lean-forward="false" selection-start-line="205" selection-start-column="46" selection-end-line="205" selection-end-column="46" />
+          <caret line="346" column="30" lean-forward="true" selection-start-line="346" selection-start-column="30" selection-end-line="346" selection-end-column="30" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1540537611844" expanded="true" signature="1991:2093" ph="INSERT INTO registration_table... " />
-            <marker date="1540537611844" expanded="true" signature="2188:2249" ph="SELECT usern... registration_table" />
-            <marker date="1540537611844" expanded="true" signature="4371:4473" ph="INSERT INTO registration_table... " />
-            <marker date="1540537611844" expanded="true" signature="4557:4618" ph="SELECT usern... registration_table" />
-            <marker date="1540537611844" expanded="true" signature="6241:6293" ph="SELECT * FRO... registration_table" />
+            <marker date="1540990857468" expanded="true" signature="2104:2206" ph="INSERT INTO registration_table... " />
+            <marker date="1540990857468" expanded="true" signature="2301:2362" ph="SELECT usern... registration_table" />
+            <marker date="1540990857468" expanded="true" signature="4484:4586" ph="INSERT INTO registration_table... " />
+            <marker date="1540990857468" expanded="true" signature="4670:4731" ph="SELECT usern... registration_table" />
+            <marker date="1540990857468" expanded="true" signature="6354:6406" ph="SELECT * FRO... registration_table" />
+            <marker date="1540990857468" expanded="true" signature="7335:7387" ph="SELECT id,It... drinks_table" />
+            <marker date="1540990857468" expanded="true" signature="8442:8537" ph="INSERT INTO Category... " />
+            <marker date="1540990857468" expanded="true" signature="8674:8765" ph="INSERT INTO drinks_table" />
+            <marker date="1540990857468" expanded="true" signature="8917:9021" ph="INSERT INTO drinks_table" />
+            <marker date="1540990857468" expanded="true" signature="9158:9247" ph="INSERT INTO drinks_table" />
+            <marker date="1540990857468" expanded="true" signature="9389:9483" ph="INSERT INTO drinks_table" />
+            <marker date="1540990857468" expanded="true" signature="9624:9717" ph="INSERT INTO drinks_table" />
+            <marker date="1540990857468" expanded="true" signature="9856:9947" ph="INSERT INTO drinks_table" />
+            <marker date="1540990857468" expanded="true" signature="10097:10199" ph="INSERT INTO snacks_" />
+            <marker date="1540990857468" expanded="true" signature="10338:10429" ph="INSERT INTO fruits_table" />
+            <marker date="1540990857468" expanded="true" signature="10566:10655" ph="INSERT INTO fish_table" />
+            <marker date="1540990857468" expanded="true" signature="10798:10893" ph="INSERT INTO vegetables_table" />
+            <marker date="1540990857468" expanded="true" signature="11035:11129" ph="INSERT INTO baby_food_table" />
           </folding>
         </state>
       </provider>

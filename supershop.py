@@ -28,6 +28,7 @@ jinja_env = Environment(extensions=['jinja2.ext.loopcontrols'])
 # User Register
 # Register Form Class
 class RegisterForm(Form):
+
     name = StringField('Name', [validators.Length(min=1, max=50)])
     username = StringField('User Name', [validators.Length(min=1, max=50)])
 
@@ -43,6 +44,10 @@ class RegisterForm(Form):
 @app.route('/upload/<filename>')
 def send_image1(filename):
     return send_from_directory("images", filename)
+@app.route('/Drinks/<filename>')
+def send_image3(filename):
+    return send_from_directory("images", filename)
+
 
 @app.route('/',methods=['GET', 'POST'])
 def home():
@@ -217,6 +222,142 @@ def login():
             return render_template('login.html', error=error)
 
     return render_template('login.html')
+
+
+@app.route('/Drinks', methods = ['GET'])
+def Drinks():
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        "SELECT id,Item_Name,Category,price from drinks_table")
+    data = cursor.fetchall()
+    x = len(data)
+    if x > 6:
+        l = x - 6
+    else:
+        l = 0
+    print(l)
+    if x > 6:
+        li = range(x - 6, x)
+        li = [*li]
+        li.reverse()
+    else:
+        li = range(0, x)
+        li = [*li]
+        li.reverse()
+
+    img = []
+
+    print(li)
+    for d in li:
+        b = str(data[d][1]) + ".jpg"
+        print(data[d][1])
+        img.append(b)
+
+    # for c in img:
+    #     print(c)
+
+    img = [*img]
+    img.reverse()
+    print(img)
+    return render_template("Drinks.html", data = data, li = li,img = img ,l = l)
+
+
+@app.route('/add_item', methods=['GET', 'POST'])
+def add_item():
+
+    if request.method == 'POST':
+        Item_Name = request.form['Item_Name']
+        Category = request.form.get('Category')
+        price = request.form['price']
+        description = request.form['description']
+        print(Item_Name)
+
+        # Create cursor
+        cur = mysql.connection.cursor()
+
+        # Execute query
+        if Category=='Life_Style':
+            cur.execute(
+                "INSERT INTO  life_style_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category=='Drinks':
+            cur.execute(
+                "INSERT INTO  drinks_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Chocolate_&_Candies':
+            cur.execute(
+                "INSERT INTO  chocolate_&_candies_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Meat':
+            cur.execute(
+                "INSERT INTO  meat_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Home_Care':
+            cur.execute(
+                "INSERT INTO  home_care_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Biscuits':
+            cur.execute(
+                "INSERT INTO  biscuits_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Breads':
+            cur.execute(
+                "INSERT INTO  breads_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Snacks_&_Instants':
+            cur.execute(
+                "INSERT INTO  snacks_&_instants_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Fruits':
+            cur.execute(
+                "INSERT INTO  fruits_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Fish':
+            cur.execute(
+                "INSERT INTO  fish_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Vegetables':
+            cur.execute(
+                "INSERT INTO  vegetables_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+        elif Category == 'Baby_Food':
+            cur.execute(
+                "INSERT INTO  baby_food_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                (Item_Name, Category, price, description))
+
+       # data = cur.fetchall()
+        #print(data[0][0])
+        Id = str(Item_Name)+".jpg"
+        print(Id)
+
+        target = os.path.join(APP_ROOT, 'images/')
+        # target = os.path.join(APP_ROOT, 'static/')
+        print(target)
+        if not os.path.isdir(target):
+            os.mkdir(target)
+        else:
+            print("Couldn't create upload directory: {}".format(target))
+        print(request.files.getlist("file"))
+        for upload in request.files.getlist("file"):
+            print(upload)
+            print("{} is the file name".format(upload.filename))
+            filename = upload.filename
+
+            # Id = request.form['Id']
+            # Id = Id + ".jpg"
+            destination = "/".join([target, Id])
+            print("Accept incoming file:", filename)
+            print("Save it to:", destination)
+            upload.save(destination)
+
+        # Commit to DB
+        mysql.connection.commit()
+
+        # Close connection
+        cur.close()
+
+        return redirect("http://127.0.0.1:5000/")
+    return render_template("add_item.html")
 
 
 if __name__ == '__main__':
