@@ -1,5 +1,8 @@
 import gc
 import os
+from tkinter import messagebox
+
+
 
 import MySQLdb
 from flask import Flask, render_template, request, flash, session, redirect, url_for, send_from_directory
@@ -10,7 +13,7 @@ from wtforms import Form, TextField, validators, PasswordField, BooleanField, St
 from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart, connection
 from functools import wraps
-
+import ctypes
 __author__ = 'ibininja'
 
 
@@ -24,6 +27,8 @@ mysql = MySQL(app)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 jinja_env = Environment(extensions=['jinja2.ext.loopcontrols'])
+
+
 
 # User Register
 # Register Form Class
@@ -39,7 +44,6 @@ class RegisterForm(Form):
     ])
     confirm = PasswordField('Confirm Password')
     mobileno = StringField('Mobile No.', [validators.Length(min=1, max=50)])
-
 
 @app.route('/upload/<filename>')
 def send_image1(filename):
@@ -185,9 +189,6 @@ def registertrans():
 def cart():
     return render_template("cart.html")
 
-
-
-
 # User loginmain
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -227,6 +228,8 @@ def login():
     return render_template('login.html')
 
 
+
+
 @app.route('/Drinks', methods = ['GET'])
 def Drinks():
     cursor = mysql.connection.cursor()
@@ -263,6 +266,45 @@ def Drinks():
     img.reverse()
     print(img)
     return render_template("Drinks.html", data = data, li = li,img = img ,l = l)
+
+
+@app.route('/Fruits', methods = ['GET'])
+def Fruits():
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        "SELECT id,Item_Name,Category,price from fruits_table")
+    data = cursor.fetchall()
+    x = len(data)
+    if x > 6:
+        l = x - 6
+    else:
+        l = 0
+    print(l)
+    if x > 6:
+        li = range(x - 6, x)
+        li = [*li]
+        li.reverse()
+    else:
+        li = range(0, x)
+        li = [*li]
+        li.reverse()
+
+    img = []
+
+    print(li)
+    for d in li:
+        b = str(data[d][1]) + ".jpg"
+        print(data[d][1])
+        img.append(b)
+
+    # for c in img:
+    #     print(c)
+
+    img = [*img]
+    img.reverse()
+    print(img)
+    return render_template("Fruits.html", data = data, li = li,img = img ,l = l)
+
 
 
 @app.route('/add_item', methods=['GET', 'POST'])
@@ -330,8 +372,7 @@ def add_item():
 
        # data = cur.fetchall()
         #print(data[0][0])
-        #Id = str(Item_Name)+".jpg"
-        Id = str(Item_Name) + ".jpg"
+        Id = str(Item_Name)+".jpg"
         print(Id)
 
         target = os.path.join(APP_ROOT, 'images/')
@@ -362,6 +403,37 @@ def add_item():
 
         return redirect("http://127.0.0.1:5000/")
     return render_template("add_item.html")
+
+
+
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone_no = request.form['phone_no']
+        details = request.form['details']
+
+        print(name)
+        cur = mysql.connection.cursor()
+
+        cur.execute(
+            "INSERT INTO  feedback(name,email,phone_no,details) VALUES(%s,%s,%s,%s)",(name,email,phone_no,details))
+
+
+
+        # Commit to DB
+        mysql.connection.commit()
+
+        # Close connection
+        cur.close()
+
+        return redirect("http://127.0.0.1:5000/")
+    return render_template("contact.html")
+
+
+
 
 
 if __name__ == '__main__':
