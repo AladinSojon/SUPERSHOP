@@ -12,13 +12,22 @@
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_responsive.css">
 
 <script type="text/javascript">
-   function getvalue(Id) {
-       console.log(Id);
-       // redirect("/description/"+Id.childNodes[7].innerText);
-       window.location.replace('http://127.0.0.1:5000/'+Id.innerText);
-    }
 
-</script>
+    function myvalue() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+           // Typical action to be performed when the document is ready:
+           // document.getElementById("demo").innerHTML = xhttp.responseText;
+        }
+    };
+      // alert(document.getElementById("ID").value);
+      x=document.getElementById("Id").innerText;
+      console.log(x);
+    xhttp.open("GET", "http://127.0.0.1:5000/update?query="+x, true);
+    xhttp.send();
+    }
+    </script>
 
 <style>
 body{
@@ -287,164 +296,62 @@ body{
 	</header>
 
 
-    <div id="content">
-       <main>
-
-	<div>
-    <a title="Post">
-			<article onclick="getvalue(this)">
-			<p>Life_Style</p>
-				<figure>
-					<img src="/static/images/lifestyle.jpg">
-					<!--<figcaption>Life Style</figcaption>-->
-				</figure>
-			</article>
-		</a>
-
-	</div>
-
-	<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Drinks</p>
-				<figure>
-					<img src="/static/images/drinks.jpeg">
-					<!--<figcaption>Drinks</figcaption>-->
-				</figure>
-
-			</article>
-		</a>
+        <div id="container">
+    <div>
+        <table style="width: 100%; height: 5cm">
+            <tr >
+                <td style="width: 40%; text-align: center">
 
 
-		</div>
-		<div>
-    <a title="Post">
+                </td>
 
-			<article onclick="getvalue(this)">
-			<p>Chocolate_&_Candies</p>
-				<figure>
-					<img src="/static/images/chocolate.jpg">
-
-				</figure>
-			</article>
-		</a>
+                <td style="width: 60%; text-align: left">
+                <p style="text-align: right">
+             <button class="button" onclick="myvalue()">Add to Cart</button>
+             </p>
 
 
-		</div>
-		<div>
-    <a title="Post">
+                {% for row in g_data[0] %}
 
-			<article onclick="getvalue(this)">
-			<p>Meat</p>
-				<figure>
-					<img src="/static/images/meat.jpg">
+                    {% if row==g_data[0][0] %}
+                     <p>Item_Name : {{g_data[0][0]}}</p>
+                     {% elif row==g_data[0][1] %}
+                     <p>Category : {{g_data[0][1]}}</p>
+                     {% elif row==g_data[0][2] %}
+                     <p id="Id">Id : {{ g_data[0][2]}}</p>
+                     {% elif row==g_data[0][3] %}
+                     <p>Price : {{ g_data[0][3]}}</p>
+                     {% endif%}
+                {% endfor %}
 
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Home_Care</p>
-				<figure>
-					<img src="/static/images/homecare.jpg">
-
-				</figure>
-			</article>
-		</a>
+                </td>
 
 
-		</div>
-		<div>
-    <a title="Post">
+            </tr>
+        </table>
 
-			<article onclick="getvalue(this)">
-			<p>Biscuits</p>
-				<figure>
-					<img src="/static/images/biscuits.jpg">
+    </div>
 
-				</figure>
-			</article>
-		</a>
+    <div style="width: 100%; margin-top: 5px">
+        <h1 style="text-align: center; margin-top: 20px"><u>Description</u></h1>
 
+        <table style="width: 100%; height: 5cm; margin-top: 2px">
+            <tr >
+                <td>
+                 {% for row in des_data[0] %}
+                    {% if row==des_data[0][0] %}
+                     <p>{{des_data[0][0]}}</p>
+                     {% endif%}
+                {% endfor %}
 
-		</div>
-		<div>
-    <a title="Post">
+                </td>
 
-			<article onclick="getvalue(this)">
-			<p>Breads</p>
-				<figure>
-					<img src="/static/images/cake.jpg">
+            </tr>
+        </table>
 
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Snacks_&_Instants</p>
-				<figure>
-					<img src="/static/images/snacks.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fruits</p>
-				<figure>
-					<img src="/static/images/fruits.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fish</p>
-				<figure>
-					<img src="/static/images/fish.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Vegetables</p>
-				<figure>
-					<img src="/static/images/vegetables.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Baby_Food</p>
-				<figure>
-					<img src="/static/images/babyfood.jpg">
-
-				</figure>
-			</article>
-	</a>
-
-
-		</div>
-		</main>
-		</div>
-		</div>
+    </div>
+</div>
+</div>
 
 <!--
 {#    <div class="page_menu">#}

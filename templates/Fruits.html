@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>Fruits</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -13,7 +13,7 @@
 
 <script type="text/javascript">
    function getvalue(Id) {
-       console.log(Id);
+       console.log(Id.innerText);
        // redirect("/description/"+Id.childNodes[7].innerText);
        window.location.replace('http://127.0.0.1:5000/'+Id.innerText);
     }
@@ -136,18 +136,12 @@ body{
 												<span class="custom_dropdown_placeholder clc">All Categories</span>
 												<i class="fas fa-chevron-down"></i>
 												<ul class="custom_list clc">
-													<li><a class="clc" href="#">Life_Style</a></li>
-													<li><a class="clc" href="#">Home_Care</a></li>
-													<li><a class="clc" href="#">Fruits</a></li>
-													<li><a class="clc" href="#">Drinks</a></li>
-													<li><a class="clc" href="#">Biscuits</a></li>
-													<li><a class="clc" href="#">Fish</a></li>
-                                                    <li><a class="clc" href="#">Chocolate_&_Candies</a></li>
-                                                    <li><a class="clc" href="#">Breads</a></li>
-                                                    <li><a class="clc" href="#">Vegetables</a></li>
-                                                    <li><a class="clc" href="#">Meat</a></li>
-                                                    <li><a class="clc" href="#">Snacks_&_Instants</a></li>
-                                                    <li><a class="clc" href="#">Baby_Food</a></li>
+													<li><a class="clc" href="#">All Categories</a></li>
+													<li><a class="clc" href="#">Computers</a></li>
+													<li><a class="clc" href="#">Laptops</a></li>
+													<li><a class="clc" href="#">Cameras</a></li>
+													<li><a class="clc" href="#">Hardware</a></li>
+													<li><a class="clc" href="#">Smartphones</a></li>
 												</ul>
 											</div>
 										</div>
@@ -159,9 +153,6 @@ body{
 					</div>
 
 					<!-- Wishlist -->
-					{% if session.username!="Admin" and session.logged_in%}
-
-
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
@@ -187,8 +178,6 @@ body{
 							</div>
 						</div>
 					</div>
-
-					 {% endif %}
 				</div>
 			</div>
 		</div>
@@ -213,8 +202,9 @@ body{
 								<ul class="cat_menu">
 									<li><a href="#">Life Style <i class="fas fa-chevron-right ml-auto"></i></a></li>
 									<li><a href="#">Home Care<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="/Fruits">Fruits<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="/Drinks">Drinks<i class="fas fa-chevron-right"></i></a></li>
+									<li>
+										<a href="#">Fruits<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Drinks<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="#">Biscuits<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="#">Fish<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="#">Chocolate & Candies<i class="fas fa-chevron-right"></i></a></li>
@@ -243,24 +233,12 @@ body{
 											<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
 											<li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
 											<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
 										</ul>
 									</li>
-
-
-									{% if session.username=="Admin" %}
-                                <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
-                                <li><a href="#">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
-                                  {% else %}
-								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
-                                 {% endif %}
-
-
-
-
-
-
-						    	</ul>
+									<li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+								</ul>
 							</div>
 
 							<!-- Menu Trigger -->
@@ -287,166 +265,201 @@ body{
 	</header>
 
 
-    <div id="content">
+<div id="content">
+
+       <center style="padding-top: 10px"><h2>Fruits</h2></center>
        <main>
+      <div>
+      {% for d in li %}
+        <a title="Post">
 
-	<div>
-    <a title="Post">
-			<article onclick="getvalue(this)">
-			<p>Life_Style</p>
-				<figure>
-					<img src="/static/images/lifestyle.jpg">
-					<!--<figcaption>Life Style</figcaption>-->
+			<article  onclick="getvalue(this)">
+
+                {% for row in data[d] %}
+                    {% if row==data[d][0] %}
+                     <p>Id : {{data[d][0]}}</p>
+                     {% elif row==data[d][1] %}
+                     <p>Item Name : {{ data[d][1]}}</p>
+                     {% elif row==data[d][2] %}
+                     <p>Category : {{ data[d][2]}}</p>
+                     {% elif row==data[d][3] %}
+                     <p>Price : {{ data[d][3]}}</p>
+                     {% endif%}
+                {% endfor %}
+
+                <figure>
+
+					<img src="{{url_for('send_image3',filename = img[d-l])}}">
 				</figure>
+
 			</article>
 		</a>
-
-	</div>
-
-	<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Drinks</p>
-				<figure>
-					<img src="/static/images/drinks.jpeg">
-					<!--<figcaption>Drinks</figcaption>-->
-				</figure>
-
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Chocolate_&_Candies</p>
-				<figure>
-					<img src="/static/images/chocolate.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Meat</p>
-				<figure>
-					<img src="/static/images/meat.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Home_Care</p>
-				<figure>
-					<img src="/static/images/homecare.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Biscuits</p>
-				<figure>
-					<img src="/static/images/biscuits.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Breads</p>
-				<figure>
-					<img src="/static/images/cake.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Snacks_&_Instants</p>
-				<figure>
-					<img src="/static/images/snacks.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fruits</p>
-				<figure>
-					<img src="/static/images/fruits.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fish</p>
-				<figure>
-					<img src="/static/images/fish.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Vegetables</p>
-				<figure>
-					<img src="/static/images/vegetables.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Baby_Food</p>
-				<figure>
-					<img src="/static/images/babyfood.jpg">
-
-				</figure>
-			</article>
-	</a>
-
-
+       {% endfor %}
 		</div>
 		</main>
-		</div>
-		</div>
+    </div>
 
-<!--
+
+{#    <div id="content">#}
+{#       <main>#}
+{##}
+{#	<div>#}
+{#    <a title="Post">#}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Life_Style</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/lifestyle.jpg">#}
+{#					<!--<figcaption>Life Style</figcaption>-->#}
+{#				</figure>#}
+{#			</article>#}
+{#		</a>#}
+{##}
+{#	</div>#}
+{##}
+{#	<div>#}
+{#    <a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Drinks</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/drinks.jpeg">#}
+{#					<!--<figcaption>Drinks</figcaption>-->#}
+{#				</figure>#}
+{##}
+{#			</article>#}
+{#		</a>#}
+{##}
+{##}
+{#		</div>#}
+{#		<div>#}
+{#    <a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Chocolate_&_Candies</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/chocolate.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#		</a>#}
+{##}
+{##}
+{#		</div>#}
+{#		<div>#}
+{#    <a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Meat</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/meat.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#		</a>#}
+{##}
+{##}
+{#		</div>#}
+{#		<div>#}
+{#    <a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Home_Care</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/homecare.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#		</a>#}
+{##}
+{##}
+{#		</div>#}
+{#		<div>#}
+{#    <a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Biscuits</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/biscuits.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#		</a>#}
+{##}
+{##}
+{#		</div>#}
+{#		<div>#}
+{#    <a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Breads</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/cake.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#		</a>#}
+{##}
+{##}
+{#		</div>#}
+{#		<div>#}
+{#    <a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Snacks_&_Instants</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/snacks.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#	</a>#}
+{#	<a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Fruits</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/fruits.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#	</a>#}
+{#	<a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Fish</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/fish.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#	</a>#}
+{#	<a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Vegetables</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/vegetables.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#	</a>#}
+{#	<a title="Post">#}
+{##}
+{#			<article onclick="getvalue(this)">#}
+{#			<p>Baby_Food</p>#}
+{#				<figure>#}
+{#					<img src="/static/images/babyfood.jpg">#}
+{##}
+{#				</figure>#}
+{#			</article>#}
+{#	</a>#}
+{##}
+{##}
+{#		</div>#}
+{#		</main>#}
+{#		</div>#}
+{#		</div>#}
+
+
 {#    <div class="page_menu">#}
 {#			<div class="container">#}
 {#				<div class="row">#}
@@ -530,6 +543,7 @@ body{
 {#				</div>#}
 {#			</div>#}
 {#		</div>#}
+
 
 
 
@@ -622,8 +636,7 @@ body{
 		</div>
 	</footer>
 
-
-
+</div>
 
 <script src="../static/js/jquery-3.3.1.min.js"></script>
 <script src="../static/styles/bootstrap4/popper.js"></script>
