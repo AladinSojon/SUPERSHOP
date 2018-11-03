@@ -129,8 +129,8 @@ body{
 						<div class="header_search">
 							<div class="header_search_content">
 								<div class="header_search_form_container">
-									<form action="{{ url_for('search_result') }}" class="header_search_form clearfix" id="upload_form" method="POST">
-										<input type="search" name="Item_Name" required="required" class="header_search_input" value="{{request.form.Item_Name}}" placeholder="Search for products...">
+									<form action="{{ url_for('add_item') }}" class="header_search_form clearfix" id="upload_form" method="POST">
+										<input type="search" name="Item_Name" required="required" class="header_search_input" placeholder="Search for products...">
 										<div class="custom_dropdown">
 
                                             <div class="custom_dropdown_list">
@@ -153,7 +153,7 @@ body{
 
                                                 <div class="form-group">
 {#                                                    <label class="sr-only" for="rating">Rating for Cafe</label>#}
-                                                    <select class="form-control" id="Category" name="Category">
+                                                    <select class="form-control" id="rating" name="rating">
                                                         <option selected>Life_Style</option>
                                                         <option>Home_Care</option>
                                                         <option>Fruits</option>
@@ -228,18 +228,18 @@ body{
 								</div>
 
 								<ul class="cat_menu">
-									<li><a href="/Life_Style">Life Style <i class="fas fa-chevron-right ml-auto"></i></a></li>
-									<li><a href="/Home_Care">Home Care<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Life Style <i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<li><a href="#">Home Care<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="/Fruits">Fruits<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="/Drinks">Drinks<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="/Biscuits">Biscuits<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="/Fish">Fish<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="/Chocolate_&_Candies">Chocolate & Candies<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="/Breads">Breads<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="/Vegetables">Vegetables<i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="/Meat">Meat<i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="/Snacks_&_Instants">Snacks & Instants<i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="/Baby_Food">Baby Food<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Biscuits<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Fish<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Chocolate & Candies<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Breads<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">Vegetables<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Meat<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Snacks & Instants<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Baby Food<i class="fas fa-chevron-right"></i></a></li>
 								</ul>
 							</div>
 
@@ -248,7 +248,7 @@ body{
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Super Deals<i class="fas fa-chevron-down"></i></a></li>
 
 									<li class="hassubs">
@@ -293,160 +293,38 @@ body{
 
 
     <div id="content">
+
+        <center style="padding-top: 10px"><h2>Search Result</h2></center>
        <main>
+      <div>
+      {% for d in li %}
+        <a title="Post">
 
-	<div>
-    <a title="Post">
-			<article onclick="getvalue(this)">
-			<p>Life_Style</p>
-				<figure>
-					<img src="/static/images/lifestyle.jpg">
-					<!--<figcaption>Life Style</figcaption>-->
+			<article  onclick="getvalue(this)">
+
+                {% for row in data[d] %}
+                    {% if row==data[d][0] %}
+                     <p>Item Name : {{data[d][0]}}</p>
+                     {% elif row==data[d][1] %}
+                     <p>Category : {{ data[d][1]}}</p>
+                     {% elif row==data[d][2] %}
+                     <p>Price : {{ data[d][2]}}</p>
+                     {% elif row==data[d][3] %}
+                     <p>Id : {{ data[d][3]}}</p>
+                     {% endif%}
+                {% endfor %}
+
+                <figure>
+
+					<img src="{{url_for('send_image4',filename = img[d-l])}}">
 				</figure>
+
 			</article>
 		</a>
-
-	</div>
-
-	<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Drinks</p>
-				<figure>
-					<img src="/static/images/drinks.jpeg">
-					<!--<figcaption>Drinks</figcaption>-->
-				</figure>
-
-			</article>
-		</a>
-
-
+       {% endfor %}
 		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Chocolate_&_Candies</p>
-				<figure>
-					<img src="/static/images/chocolate.jpg">
-
-				</figure>
-			</article>
-		</a>
 
 
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Meat</p>
-				<figure>
-					<img src="/static/images/meat.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Home_Care</p>
-				<figure>
-					<img src="/static/images/homecare.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Biscuits</p>
-				<figure>
-					<img src="/static/images/biscuits.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Breads</p>
-				<figure>
-					<img src="/static/images/cake.jpg">
-
-				</figure>
-			</article>
-		</a>
-
-
-		</div>
-		<div>
-    <a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Snacks_&_Instants</p>
-				<figure>
-					<img src="/static/images/snacks.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fruits</p>
-				<figure>
-					<img src="/static/images/fruits.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Fish</p>
-				<figure>
-					<img src="/static/images/fish.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Vegetables</p>
-				<figure>
-					<img src="/static/images/vegetables.jpg">
-
-				</figure>
-			</article>
-	</a>
-	<a title="Post">
-
-			<article onclick="getvalue(this)">
-			<p>Baby_Food</p>
-				<figure>
-					<img src="/static/images/babyfood.jpg">
-
-				</figure>
-			</article>
-	</a>
-
-
-		</div>
 		</main>
 		</div>
 		</div>

@@ -51,6 +51,9 @@ def send_image1(filename):
 @app.route('/Drinks/<filename>')
 def send_image3(filename):
     return send_from_directory("images", filename)
+@app.route('/search_result/<filename>')
+def send_image4(filename):
+    return send_from_directory("images", filename)
 
 
 @app.route('/',methods=['GET', 'POST'])
@@ -432,6 +435,100 @@ def contact():
         return redirect("http://127.0.0.1:5000/")
     return render_template("contact.html")
 
+
+
+
+@app.route('/search_result', methods=['GET', 'POST'])
+def search_result():
+    if request.method == 'POST':
+        Item_Name = request.form['Item_Name']
+        Category = request.form.get('Category')
+
+
+        cur = mysql.connection.cursor()
+
+
+        if Category=='Life_Style':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM life_style_table where Item_Name = %s ",[Item_Name])
+
+        elif Category=='Drinks':
+            cur.execute(
+                "SELECT Item_Name, Category, price, id FROM drinks_table where Item_Name = %s ",[Item_Name])
+
+        elif Category == 'Chocolate_&_Candies':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM chocolate_&_candies_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Meat':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM meat_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Home_Care':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM home_care_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Biscuits':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM biscuits_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Breads':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM breads_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Snacks_&_Instants':
+            cur.execute(
+                "SELECT Item_Name, Category, price, id FROM snacks_&_instants_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Fruits':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM fruits_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Fish':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM fish_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Vegetables':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM vegetables_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Baby_Food':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM baby_fruits_table where Item_Name = %s ",[Item_Name])
+
+
+
+        data = cur.fetchall()
+
+        x = len(data)
+        if x > 6:
+            l = x - 6
+        else:
+            l = 0
+        print(l)
+        if x > 6:
+            li = range(x - 6, x)
+            li = [*li]
+            li.reverse()
+        else:
+            li = range(0, x)
+            li = [*li]
+            li.reverse()
+
+        img = []
+
+        print(li)
+        for d in li:
+            b = str(data[d][0]) + ".jpg"
+            print(data[d][0])
+            img.append(b)
+
+        # for c in img:
+        #     print(c)
+
+        img = [*img]
+        img.reverse()
+        print(img)
+
+        # Commit to DB
+        mysql.connection.commit()
+
+        # Close connection
+        cur.close()
+
+        return render_template("search_result.html",data=data, li=li, img=img, l=l)
+    return render_template("search_result.html")
 
 
 

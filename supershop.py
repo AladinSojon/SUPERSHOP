@@ -47,6 +47,9 @@ def send_image1(filename):
 @app.route('/Drinks/<filename>')
 def send_image3(filename):
     return send_from_directory("images", filename)
+@app.route('/search_result/<filename>')
+def send_image4(filename):
+    return send_from_directory("images", filename)
 
 
 @app.route('/',methods=['GET', 'POST'])
