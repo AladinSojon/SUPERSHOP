@@ -14,9 +14,9 @@
 
 <script type="text/javascript">
    function getvalue(Id) {
-       console.log(Id.innerText);
+       console.log(Id);
        // redirect("/description/"+Id.childNodes[7].innerText);
-       window.location.replace('http://127.0.0.1:5000/'+Id.innerText);
+       window.location.replace('http://127.0.0.1:5000/description/'+Id.childNodes[1].innerText+" : "+Id.childNodes[5].innerText);
     }
 
 </script>

@@ -1,5 +1,8 @@
 import gc
 import os
+from tkinter import messagebox
+
+
 
 import MySQLdb
 from flask import Flask, render_template, request, flash, session, redirect, url_for, send_from_directory
@@ -10,7 +13,7 @@ from wtforms import Form, TextField, validators, PasswordField, BooleanField, St
 from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart, connection
 from functools import wraps
-
+import ctypes
 __author__ = 'ibininja'
 
 
@@ -24,6 +27,8 @@ mysql = MySQL(app)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 jinja_env = Environment(extensions=['jinja2.ext.loopcontrols'])
+
+
 
 # User Register
 # Register Form Class
@@ -39,7 +44,6 @@ class RegisterForm(Form):
     ])
     confirm = PasswordField('Confirm Password')
     mobileno = StringField('Mobile No.', [validators.Length(min=1, max=50)])
-
 
 @app.route('/upload/<filename>')
 def send_image1(filename):
@@ -188,9 +192,6 @@ def registertrans():
 def cart():
     return render_template("cart.html")
 
-
-
-
 # User loginmain
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -230,6 +231,116 @@ def login():
     return render_template('login.html')
 
 
+@app.route('/description/<string:id>', methods = ['GET'])
+def description(id):
+    Id = id
+    # homeId = 12
+    id_n = Id.split()
+    print(id_n)
+    cursor = mysql.connection.cursor()
+    if  id_n[6] == 'Life_Style':
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from life_style_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Drinks":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from drinks_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Chocolate_&_Candies":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from drinks_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Meat":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from meat_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Home_Care":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from home_care_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Biscuits":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from biscuits_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Breads":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from breads_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Snacks_&_Instants":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from snacks_&_instants_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Fruits":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from fruits_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Fish":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from fish_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Vegetables":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from vegetables_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Baby_Food":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from baby_food_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+
+    #img = Item_Name+'.jpg'
+    return render_template("description.html",g_data = g_data, des_data = des_data)
+
+
+
+
 @app.route('/Drinks', methods = ['GET'])
 def Drinks():
     cursor = mysql.connection.cursor()
@@ -266,6 +377,45 @@ def Drinks():
     img.reverse()
     print(img)
     return render_template("Drinks.html", data = data, li = li,img = img ,l = l)
+
+
+@app.route('/Fruits', methods = ['GET'])
+def Fruits():
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        "SELECT id,Item_Name,Category,price from fruits_table")
+    data = cursor.fetchall()
+    x = len(data)
+    if x > 6:
+        l = x - 6
+    else:
+        l = 0
+    print(l)
+    if x > 6:
+        li = range(x - 6, x)
+        li = [*li]
+        li.reverse()
+    else:
+        li = range(0, x)
+        li = [*li]
+        li.reverse()
+
+    img = []
+
+    print(li)
+    for d in li:
+        b = str(data[d][1]) + ".jpg"
+        print(data[d][1])
+        img.append(b)
+
+    # for c in img:
+    #     print(c)
+
+    img = [*img]
+    img.reverse()
+    print(img)
+    return render_template("Fruits.html", data = data, li = li,img = img ,l = l)
+
 
 
 @app.route('/add_item', methods=['GET', 'POST'])
@@ -333,8 +483,7 @@ def add_item():
 
        # data = cur.fetchall()
         #print(data[0][0])
-        #Id = str(Item_Name)+".jpg"
-        Id = str(Item_Name) + ".jpg"
+        Id = str(Item_Name)+".jpg"
         print(Id)
 
         target = os.path.join(APP_ROOT, 'images/')
@@ -365,6 +514,128 @@ def add_item():
 
         return redirect("http://127.0.0.1:5000/")
     return render_template("add_item.html")
+
+
+
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone_no = request.form['phone_no']
+        details = request.form['details']
+
+        print(name)
+        cur = mysql.connection.cursor()
+
+        cur.execute(
+            "INSERT INTO  feedback(name,email,phone_no,details) VALUES(%s,%s,%s,%s)",(name,email,phone_no,details))
+
+
+
+        # Commit to DB
+        mysql.connection.commit()
+
+        # Close connection
+        cur.close()
+
+        return redirect("http://127.0.0.1:5000/")
+    return render_template("contact.html")
+
+@app.route('/search_result', methods=['GET', 'POST'])
+def search_result():
+    if request.method == 'POST':
+        Item_Name = request.form['Item_Name']
+        Category = request.form.get('Category')
+
+
+        cur = mysql.connection.cursor()
+
+
+        if Category=='Life_Style':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM life_style_table where Item_Name = %s ",[Item_Name])
+
+        elif Category=='Drinks':
+            cur.execute(
+                "SELECT Item_Name, Category, price, id FROM drinks_table where Item_Name = %s ",[Item_Name])
+
+        elif Category == 'Chocolate_&_Candies':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM chocolate_&_candies_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Meat':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM meat_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Home_Care':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM home_care_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Biscuits':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM biscuits_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Breads':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM breads_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Snacks_&_Instants':
+            cur.execute(
+                "SELECT Item_Name, Category, price, id FROM snacks_&_instants_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Fruits':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM fruits_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Fish':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM fish_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Vegetables':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM vegetables_table where Item_Name = %s ",[Item_Name])
+        elif Category == 'Baby_Food':
+            cur.execute(
+                "SELECT Item_Name, Category, price, description FROM baby_fruits_table where Item_Name = %s ",[Item_Name])
+
+
+
+        data = cur.fetchall()
+
+        x = len(data)
+        if x > 6:
+            l = x - 6
+        else:
+            l = 0
+        print(l)
+        if x > 6:
+            li = range(x - 6, x)
+            li = [*li]
+            li.reverse()
+        else:
+            li = range(0, x)
+            li = [*li]
+            li.reverse()
+
+        img = []
+
+        print(li)
+        for d in li:
+            b = str(data[d][0]) + ".jpg"
+            print(data[d][0])
+            img.append(b)
+
+        # for c in img:
+        #     print(c)
+
+        img = [*img]
+        img.reverse()
+        print(img)
+
+        # Commit to DB
+        mysql.connection.commit()
+
+        # Close connection
+        cur.close()
+
+        return render_template("search_result.html",data=data, li=li, img=img, l=l)
+    return render_template("search_result.html")
+
+
 
 
 if __name__ == '__main__':
