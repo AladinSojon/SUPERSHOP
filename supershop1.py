@@ -437,6 +437,117 @@ def contact():
 
 
 
+@app.route('/description/<string:id>', methods = ['GET'])
+def description(id):
+    Id = id
+    # homeId = 12
+    id_n = Id.split()
+    print(id_n)
+    cursor = mysql.connection.cursor()
+    if  id_n[6] == 'Life_Style':
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from life_style_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Drinks":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from drinks_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Chocolate_&_Candies":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from drinks_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Meat":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from meat_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Home_Care":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from home_care_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Biscuits":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from biscuits_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Breads":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from breads_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Snacks_&_Instants":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from snacks_&_instants_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Fruits":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from fruits_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Fish":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from fish_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Vegetables":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from vegetables_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+    elif id_n[6]=="Baby_Food":
+        cursor.execute(
+            "SELECT Item_Name,Category,id,price from baby_food_table WHERE id=%s", [id_n[2]])
+        g_data = cursor.fetchall()
+
+        cursor.execute(
+            "SELECT description from drinks_table WHERE id=%s", [id_n[2]])
+        des_data = cursor.fetchall()
+
+    #img = Item_Name+'.jpg'
+    return render_template("description.html",g_data = g_data, des_data = des_data)
+
+
+
+
+
 
 @app.route('/search_result', methods=['GET', 'POST'])
 def search_result():
