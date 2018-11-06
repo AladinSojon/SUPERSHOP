@@ -22,9 +22,11 @@
         }
     };
       // alert(document.getElementById("ID").value);
-      x=document.getElementById("Id").innerText;
+      x = document.getElementById("Id").innerText;
+      y = document.getElementById("Category").innerText;
+
       console.log(x);
-    xhttp.open("GET", "http://127.0.0.1:5000/update?query="+x, true);
+    xhttp.open("GET", "http://127.0.0.1:5000/update?query="+x+"&query2="+y, true);
     xhttp.send();
     }
     </script>
@@ -78,6 +80,26 @@ body{
 			box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .20);
 
 		}
+</style>
+
+
+
+    <style type="text/css">
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 11px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #31a6af;
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 5px #999;
+
+}
 </style>
 
 
@@ -240,7 +262,7 @@ body{
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Super Deals<i class="fas fa-chevron-down"></i></a></li>
 
 									<li class="hassubs">
@@ -251,7 +273,7 @@ body{
 											<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
 											<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
 											<li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="/cart">Cart<i class="fas fa-chevron-down"></i></a></li>
 											<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
 										</ul>
 									</li>
@@ -261,6 +283,7 @@ body{
                                 <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
                                 <li><a href="#">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
                                   {% else %}
+                                <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}
 
@@ -296,33 +319,30 @@ body{
 	</header>
 
 
-        <div id="container">
-    <div>
+     <div id="container">
+        <div>
         <table style="width: 100%; height: 5cm">
             <tr >
-                <td style="width: 40%; text-align: center">
 
-
-                </td>
-
-                <td style="width: 60%; text-align: left">
+                <td style="width: 60%; background-color: #117a8b; text-align: left">
                 <p style="text-align: right">
              <button class="button" onclick="myvalue()">Add to Cart</button>
              </p>
 
 
-                {% for row in g_data[0] %}
+               <center> {% for row in g_data[0] %}
 
                     {% if row==g_data[0][0] %}
-                     <p>Item_Name : {{g_data[0][0]}}</p>
+                     <p style="font-size: 20px;color: white">Item_Name : {{g_data[0][0]}}</p>
                      {% elif row==g_data[0][1] %}
-                     <p>Category : {{g_data[0][1]}}</p>
+                     <p id="Category" style="font-size: 20px;color: white">Category : {{g_data[0][1]}}</p>
                      {% elif row==g_data[0][2] %}
-                     <p id="Id">Id : {{ g_data[0][2]}}</p>
+                     <p id="Id" style="font-size: 20px;color: white">Id : {{ g_data[0][2]}}</p>
                      {% elif row==g_data[0][3] %}
-                     <p>Price : {{ g_data[0][3]}}</p>
+                     <p style="font-size: 20px;color: white">Price : {{ g_data[0][3]}}</p>
                      {% endif%}
                 {% endfor %}
+                </center>
 
                 </td>
 
@@ -332,15 +352,15 @@ body{
 
     </div>
 
-    <div style="width: 100%; margin-top: 5px">
-        <h1 style="text-align: center; margin-top: 20px"><u>Description</u></h1>
+    <div style="width: 100%; margin-top: 5px; padding-top: 10px;background-color: navy">
+        <h2 style="text-align: center; margin-top: 20px;color: white"><u>Description</u></h2>
 
         <table style="width: 100%; height: 5cm; margin-top: 2px">
             <tr >
                 <td>
                  {% for row in des_data[0] %}
                     {% if row==des_data[0][0] %}
-                     <p>{{des_data[0][0]}}</p>
+                    <center> <p style="font-size: 20px;color: white">{{des_data[0][0]}}</p></center>
                      {% endif%}
                 {% endfor %}
 

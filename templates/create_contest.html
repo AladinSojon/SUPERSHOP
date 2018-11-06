@@ -1,0 +1,130 @@
+
+{% block head %}
+{% endblock head %}
+
+{% block content %}
+    <head>
+        <meta http-equiv="x-ua-compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <link href="/static/For%20Table/dataTables.bootstrap.min.css" rel="stylesheet">
+    </head>
+<style>
+    #loll
+    {
+        margin-left: 4%;
+        margin-right: 4%;
+        width: 92%;
+        margin-top: 130px;
+    }
+    #first
+    {
+        float: left;
+        width: 30%;
+    }
+    #second
+    {
+        float: right;
+        width: 30%;
+    }
+    #tot
+    {
+        width: 92%;
+        float: top;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+</style>
+<body>
+
+{%  include 'layout.html' %}
+  <h1 class="lead" align="center"><font size="10px">Create Contest</font></h1>
+{%  from  "includes/_formhelpers.html" import render_field %}
+
+<form method="POST">
+<div id="tot">
+    <p><b>Contest Details</b></p>
+    <hr>
+    <div class="form-group">
+        {{ render_field(form.contestname, class_="form-control")}}
+    </div>
+
+    <div>
+            <div id="first">
+                <p>Contest Date</p>
+                <input type=date name="date">
+            </div>
+
+        <div id="second">
+            <P>Contest Start Time</P>
+            <input type=time name="start_time">
+        </div>
+        <div id="second">
+            <p>Contest End Time</p>
+        <input type="time" name="end_time">
+        </div>
+    </div>
+
+
+</div>
+
+<div id="loll">
+    <p><b>Choose Problem From the list</b></p>
+    <hr>
+    <table class="table table-striped table-bordered table-hover" id="mydata">
+
+    <thead>
+            <tr>
+                <th>Problem Name</th>
+                <th>Ac Submission</th>
+                <th>Submission</th>
+                <th>Choose</th>
+            </tr>
+    </thead>
+        <tfoot>
+            <tr>
+
+            </tr>
+    </tfoot>
+
+    <tbody>
+    {% for problem in obj %}
+        <tr>
+            <td>
+
+                {{ problem.name }}
+
+            </td>
+            <td>
+                {{ problem.acc }}
+            </td>
+            <td>
+                {{ problem.sc }}
+            </td>
+            <td>
+                <input type="checkbox" class="checkbox-inline" name={{ problem.box }} >
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+
+
+    </table>
+</div>
+<div class="form-group">
+<input type="submit" class="btn btn-primary" value="Submit">
+</div>
+</form>
+
+<script src="/static/For%20Table/jquery.js"></script>
+<script src="/static/For%20Table/jquery.dataTables.min.js"></script>
+<script src="/static/For%20Table/dataTables.bootstrap4.min.js"></script>
+<script>
+
+    $('#mydata').dataTable()
+</script>
+
+
+
+</body>
+
+{% endblock content %}

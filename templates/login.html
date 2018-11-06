@@ -37,9 +37,15 @@
 
 							</div>
 							<div class="top_bar_user">
-								<div class="user_icon"><img src="images/user.svg" alt=""></div>
-								<div><a href="#">Register</a></div>
-								<div><a href="#">Sign in</a></div>
+                                <div><a href="/">Home</a></div>
+								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
+                                {% if session.logged_in %}
+                                <div><a href="/registertran">Register</a></div>
+                                <div><a href="/logout">Logout</a></div>
+                                  {% else %}
+                                  <div><a href="/registertran">Register</a></div>
+						    		<div><a href="/login">Sign in</a></div>
+                                 {% endif %}
 							</div>
 						</div>
 					</div>
