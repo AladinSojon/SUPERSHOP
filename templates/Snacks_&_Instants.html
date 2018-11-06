@@ -1,10 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<title>Snacks & Instants</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="OneTech shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../static/styles/bootstrap4/bootstrap.min.css">
+<link href="../static/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../static/styles/cart_styles.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/cart_responsive.css">
+
+
+<script type="text/javascript">
+   function getvalue(Id) {
+       console.log(Id);
+       // redirect("/description/"+Id.childNodes[7].innerText);
+       window.location.replace('http://127.0.0.1:5000/description/'+Id.childNodes[1].innerText+" : "+Id.childNodes[5].innerText);
+    }
+
+</script>
+
+<style>
+body{
+			font: 1rem/1.6 "Helvetica", Sans-serif;
+		}
+
+		main{
+			width: 90%;
+			margin:50px auto;
+
+			-moz-column-width: 220px;
+			-webkit-column-width: 220px;
+			column-width: 220px;
+
+			-moz-column-count: 3;
+			-webkit-column-count: 3;
+			column-count: 3;
+
+			-moz-column-gap: 10px;
+			-webkit-column-gap: 10px;
+			column-gap: 10px;
+
+		}
+
+		a[title] figure img{
+			width: 280px;
+			height: 180px;
+			margin-top:1rem;
+		}
+
+		main a[title]{
+			text-decoration: none;
+			padding: 1rem;
+			color:#424242;
+			box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
+			display: inline-block;
+
+			margin-bottom:20px;
+
+			transition: all .3s cubic-bezier(0.25, .8, .25, 1);
+		}
+
+		main:hover a[title]:not(:hover){
+			opacity: .6;
+		}
+
+		a[title]:hover{
+			box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .20);
+
+		}
+</style>
+
+
+
 </head>
+
 <body>
 
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col d-flex flex-row">
+						<div class="top_bar_content ml-auto">
+							<div class="top_bar_menu">
+
+							</div>
+							<div class="top_bar_user">
+								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
+
+								{% if session.logged_in %}
+                                <div><a href="/registertran">Register</a></div>
+                                <div><a href="/logout">Logout</a></div>
+                                  {% else %}
+                                  <div><a href="/registertran">Register</a></div>
+						    		<div><a href="/login">Sign in</a></div>
+                                 {% endif %}
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Main -->
+
+		<div class="header_main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Logo -->
+					<div class="col-lg-2 col-sm-3 col-3 order-1">
+						<div class="logo_container">
+							<div class="logo"><a href="/">SuperShop</a></div>
+						</div>
+					</div>
+
+					<!-- Search -->
+					<div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+						<div class="header_search">
+							<div class="header_search_content">
+								<div class="header_search_form_container">
+									<form action="{{ url_for('search_result') }}" class="header_search_form clearfix" id="upload_form" method="POST">
+										<input type="search" name="Item_Name" required="required" class="header_search_input" value="{{request.form.Item_Name}}" placeholder="Search for products...">
+										<div class="custom_dropdown">
+
+                                            <div class="custom_dropdown_list">
+
+
+                                                <div class="form-group">
+                                                    <select class="form-control" id="Category" name="Category">
+                                                        <option selected>Life_Style</option>
+                                                        <option>Home_Care</option>
+                                                        <option>Fruits</option>
+                                                        <option>Drinks</option>
+                                                        <option>Biscuits</option>
+                                                        <option>Fish</option>
+                                                        <option>Chocolate_&_Candies</option>
+                                                        <option>Breads</option>
+                                                        <option>Vegetables</option>
+                                                        <option>Meat</option>
+                                                        <option>Snacks_&_Instants</option>
+                                                        <option>Baby_Food</option>
+                                                    </select>
+
+                                                </div>
+
+											</div>
+
+										</div>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="../static/images/search.png" alt=""></button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Wishlist -->
+					{% if session.username!="Admin" and session.logged_in%}
+
+
+					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+
+							<!-- Cart -->
+							<div class="cart">
+								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+									<div class="cart_icon">
+										<img src="images/cart.png" alt="">
+										<div class="cart_count"><span>10</span></div>
+									</div>
+									<div class="cart_content">
+										<div class="cart_text"><a href="/cart">Cart</a></div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					 {% endif %}
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Navigation -->
+
+		<nav class="main_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+
+						<div class="main_nav_content d-flex flex-row">
+
+							<!-- Categories Menu -->
+
+							<div class="cat_menu_container">
+								<div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+									<div class="cat_burger"><span></span><span></span><span></span></div>
+									<div class="cat_menu_text">categories</div>
+								</div>
+
+								<ul class="cat_menu">
+									<li><a href="/Life_Style">Life Style <i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<li><a href="/Home_Care">Home Care<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Fruits">Fruits<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Drinks">Drinks<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Biscuits">Biscuits<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Fish">Fish<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Chocolate_&_Candies">Chocolate & Candies<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Breads">Breads<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Vegetables">Vegetables<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="/Meat">Meat<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="/Snacks_&_Instants">Snacks & Instants<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="/Baby_Food">Baby Food<i class="fas fa-chevron-right"></i></a></li>
+								</ul>
+							</div>
+
+
+							<!-- Main Nav Menu -->
+
+							<div class="main_nav_menu ml-auto">
+								<ul class="standard_dropdown main_nav_dropdown">
+									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
+{#									<li><a href="/super_deal">Super Deals<i class="fas fa-chevron-down"></i></a></li>#}
+
+
+									{% if session.username=="Admin" %}
+                                <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
+{#                                        <li><a href="/add_super_deal">Add Super Deal<i class="fas fa-chevron-down"></i></a></li>#}
+                                <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
+                                  {% else %}
+								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                 {% endif %}
+						    	</ul>
+							</div>
+
+							<!-- Menu Trigger -->
+
+							<div class="menu_trigger_container ml-auto">
+								<div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+									<div class="menu_burger">
+										<div class="menu_trigger_text">menu</div>
+										<div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Menu -->
+
+
+	</header>
+
+
+    <div id="content">
+
+        <center style="padding-top: 10px"><h2>Snacks & Instants</h2></center>
+       <main>
+      <div>
+      {% for d in li %}
+        <a title="Post">
+
+			<article  onclick="getvalue(this)">
+
+                {% for row in data[d] %}
+                    {% if row==data[d][0] %}
+                     <p>Id : {{data[d][0]}}</p>
+                     {% elif row==data[d][1] %}
+                     <p>Item Name : {{ data[d][1]}}</p>
+                     {% elif row==data[d][2] %}
+                     <p>Category : {{ data[d][2]}}</p>
+                     {% elif row==data[d][3] %}
+                     <p>Price : {{ data[d][3]}}</p>
+                     {% endif%}
+                {% endfor %}
+
+                <figure>
+
+					<img src="{{url_for('send_image3',filename = img[d-l])}}">
+				</figure>
+
+			</article>
+		</a>
+       {% endfor %}
+		</div>
+		</main>
+    </div>
+	<!-- Cart -->
+<hr>
+<hr>
+<footer class="footer">
+		<div class="container" >
+			<div class="row">
+
+				<div class="col-lg-3 footer_col">
+					<div class="footer_column footer_contact">
+						<div class="logo_container">
+							<div class="logo"><a href="#">Super Shop</a></div>
+						</div>
+						<div class="footer_title">Got Question? Call Us 24/7</div>
+						<div class="footer_phone">+8801316194629</div>
+						<div class="footer_contact_text">
+							<p>90/91 Nazimuddin Road</p>
+							<p>Chankharpul, Dhaka</p>
+						</div>
+						<div class="footer_social">
+							<ul>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="#"><i class="fab fa-google"></i></a></li>
+								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+
+
+
+</div>
+
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/styles/bootstrap4/popper.js"></script>
+<script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../static/plugins/greensock/TweenMax.min.js"></script>
+<script src="../static/plugins/greensock/TimelineMax.min.js"></script>
+<script src="../static/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="../static/plugins/greensock/animation.gsap.min.js"></script>
+<script src="../static/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="../static/plugins/easing/easing.js"></script>
+<script src="../static/js/cart_custom.js"></script>
 </body>
+
 </html>

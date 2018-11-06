@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Add Item</title>
+<title>SuperShop</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -31,19 +31,15 @@
 		<div class="top_bar">
 			<div class="container">
 				<div class="row">
-
 					<div class="col d-flex flex-row">
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_menu">
 
 							</div>
 							<div class="top_bar_user">
-                            <div style="padding-right: 20px"><a href="/">Home</a></div>
-
 								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
 								{% if session.logged_in %}
                                 <div><a href="/registertran">Register</a></div>
-
                                 <div><a href="/logout">Logout</a></div>
                                   {% else %}
                                   <div><a href="/registertran">Register</a></div>
@@ -68,7 +64,7 @@
      <div class="signup-box" style="margin-top: -250px">
         {% block body %}
         <h1>Add Item</h1>
-          <form class="form-group" id="upload-form" action="{{ url_for('add_item') }}" method="POST" enctype="multipart/form-data">
+          <form class="form-group" id="upload-form" action="{{ url_for('add_super_deal') }}" method="POST" enctype="multipart/form-data">
             <p>Item Name</p>
             <input type="text" name="Item_Name" placeholder="Enter Item Name" class="form-control"  value="{{request.form.Item_Name}}">
               <p>Category</p>
