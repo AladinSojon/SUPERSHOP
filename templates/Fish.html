@@ -176,8 +176,8 @@ body{
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 									<div class="cart_icon">
-										<img src="images/cart.png" alt="">
-										<div class="cart_count"><span>10</span></div>
+										<img src="../static/images/cart.png" alt="">
+										<div class="cart_count"><span></span></div>
 									</div>
 									<div class="cart_content">
 										<div class="cart_text"><a href="/cart">Cart</a></div>
@@ -234,6 +234,10 @@ body{
 									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
 {#									<li><a href="/super_deal">Super Deals<i class="fas fa-chevron-down"></i></a></li>#}
 
+
+                                {% if session.logged_in %}
+                                    <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
+                                {%  endif %}
 
 									{% if session.username=="Admin" %}
                                 <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>

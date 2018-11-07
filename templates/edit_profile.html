@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Registration</title>
+<title>Edit Profile</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -32,16 +32,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex flex-row">
-
+						<div class="top_bar_content ml-auto">
+							<div class="top_bar_menu">
 
 							</div>
 							<div class="top_bar_user">
-                            <div style="padding-right: 20px"><a href="/">Home</a></div>
-
-
-
+                                <div><a href="/">Home</a></div>
 								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
-                                {% if session.logged_in %}
+
+								{% if session.logged_in %}
                                 <div><a href="/registertran">Register</a></div>
                                 <div><a href="/logout">Logout</a></div>
                                   {% else %}
@@ -57,46 +56,34 @@
 	</div>
 </div>
 
- <div class="container">
+<div class="container">
       {% include 'includes/_messages.html' %}
     </div>
 
-        <img src="../static/images/image.jpg">
+        <img src="../static/images/imagenew.jpg">
 
- <div class="signup-box" style="margin-top: -270px">
+          <div class="login-box" style="margin-top: -250px">
         {% block body %}
-  <h1 style="text-align: center">Register</h1>
-  {% from "includes/_formhelpers.html" import render_field %}
-  <form form id="upload-form" action="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.name, class_="form-control")}}
-    </div>
-      <div class="form-group" style="text-align: center">
-      {{render_field(form.username, class_="form-control")}}
-    </div>
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.email, class_="form-control")}}
-    </div>
+        <h1>Edit Profile</h1>
 
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.password, class_="form-control")}}
-    </div>
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.confirm, class_="form-control")}}
-    </div>
-      <div class="form-group" style="text-align: center">
-      {{render_field(form.mobileno, class_="form-control")}}
-    </div>
 
-      <div class="form-group" style="text-align: center">
-     <strong>Files:</strong><br>
-       <input id="file-picker" type="file" name="file" accept="image/*" multiple>
-       <div id="msg"></div>
-        </div>
-    <p style="text-align: center"><input type="submit" class="btn btn-primary" value="Submit"></p>
-  </form>
-{% endblock %}
+        <form action="" method="POST">
 
+            <div class="form-group">
+                <input class="form-control" placeholder="New Name" name="name" type="text" autofocus>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="New E-mail" name="email" type="text" >
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" placeholder="New Mobile No." name="mobileno" type="text">
+            </div>
+            <!-- Change this to a button or input when using this as a form -->
+             <input type="submit" name="submit" value="Save" style="align-content: center">
+
+         </form>
+              {% endblock %}
 
 </div>
 
@@ -116,3 +103,7 @@
 </body>
 
 </html>
+
+
+
+

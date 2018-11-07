@@ -1,9 +1,6 @@
 import gc
 import os
 from tkinter import messagebox
-
-
-
 import MySQLdb
 from flask import Flask, render_template, request, flash, session, redirect, url_for, send_from_directory
 from flask_mysqldb import MySQL
@@ -53,6 +50,10 @@ def send_image3(filename):
     return send_from_directory("images", filename)
 @app.route('/search_result/<filename>')
 def send_image4(filename):
+    return send_from_directory("images", filename)
+
+@app.route('/profile/<filename>')
+def send_image5(filename):
     return send_from_directory("images", filename)
 
 
@@ -188,9 +189,39 @@ def registertrans():
 
 
 
-@app.route('/cart',methods=['GET'])
+@app.route('/cart',methods=['GET', 'POST'])
 def cart():
-    return render_template("cart.html")
+    id = request.form.get("count_field")
+    #print("count: "+id)
+    # Create cursor
+    print("x")
+    cur1 = mysql.connection.cursor()
+
+    # Get user by username
+    cur1.execute(
+        "SELECT Item_Name,Category,price FROM cart_table WHERE username=%s",[session['username']])
+    data = cur1.fetchall()
+
+    x = len(data)
+    print(x)
+    li = range(x)
+    li = [*li]
+    return render_template("cart.html",data=data,li=li)
+
+
+@app.route('/updateee', methods=['GET'])
+def updateee():
+    homeId = request.args['query']
+    print(homeId)
+    cur = mysql.connection.cursor()
+    cur.execute(
+        "DELETE FROM cart_table WHERE (Item_Name,username)=(%s,%s)",
+        (homeId,[session['username']]))
+    mysql.connection.commit()
+
+    # Close connection
+    cur.close()
+    return redirect(url_for('cart'))
 
 # User loginmain
 @app.route('/login', methods=['GET', 'POST'])
@@ -542,6 +573,111 @@ def contact():
 
         return redirect("http://127.0.0.1:5000/")
     return render_template("contact.html")
+
+@app.route('/update', methods = ['GET'])
+def update():
+    homeId = request.args['query']
+    category_id = request.args['query2']
+    id_n = homeId.split()
+    id_c = category_id.split()
+
+    print(id_n[2])
+
+
+    cur = mysql.connection.cursor()
+
+
+    if id_c[2] == 'Life_Style':
+        cur.execute(
+            "SELECT * from life_style_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Drinks':
+        cur.execute(
+            "SELECT * from drinks_table WHERE id = %s", [id_n[2]])
+    elif id_c[2] == 'Chocolate_&_Candies':
+        cur.execute(
+            "SELECT * from chocolate_&_candies_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Meat':
+        cur.execute(
+            "SELECT * from meat_table WHERE id=%s", [id_n[2]])
+
+    elif id_c[2] == 'Home_Care':
+        cur.execute(
+            "SELECT * from home_care_table WHERE id=%s", [id_n[2]])
+
+    elif id_c[2] == 'Biscuits':
+        cur.execute(
+            "SELECT * from biscuits_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Breads':
+        cur.execute(
+            "SELECT * from breads_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Snacks_&_Instants':
+        cur.execute(
+            "SELECT * from snacks_&_instants_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Fruits':
+        cur.execute(
+            "SELECT * from fruits_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Fish':
+        cur.execute(
+            "SELECT * from fish_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Vegetables':
+        cur.execute(
+            "SELECT * from vegetables_table WHERE id=%s", [id_n[2]])
+    elif id_c[2] == 'Baby_Food':
+        cur.execute(
+            "SELECT * from baby_food_table WHERE id=%s", [id_n[2]])
+    g_data = cur.fetchall()
+    print(session['username']);
+    cursor1 = mysql.connection.cursor()
+    cursor1.execute(
+        "INSERT INTO cart_table(Item_Name,Category,price,username) VALUES(%s, %s, %s, %s)",
+        (g_data[0][1], g_data[0][2], g_data[0][3], [session['username']]))
+
+    mysql.connection.commit()
+
+    # Close connection
+    cursor1.close()
+
+    return "1"
+
+
+
+
+@app.route('/profile',methods=['GET'])
+def profile():
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        "SELECT name,email,mobile_no from registration_table  WHERE username = %s",[session['username']])
+    data = cursor.fetchall()
+    usr_image = session['username']+'.jpg'
+    return render_template("profile.html",data=data,usr_image = usr_image)
+
+
+@app.route('/edit_profile', methods=['GET', 'POST'])
+def edit_profile():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        mobileno = request.form['mobileno']
+
+        print(name)
+        print(email)
+        print(mobileno)
+
+        # Create cursor
+        cur = mysql.connection.cursor()
+
+        # Execute query
+        cur.execute("UPDATE registration_table SET name=%s, email =%s, mobile_no = %s WHERE username= %s"
+                    , (name, email, mobileno,[session['username']]))
+
+        # Commit to DB
+        mysql.connection.commit()
+
+        # Close connection
+        cur.close()
+        return redirect(url_for('profile'))
+    return render_template('edit_profile.html')
+
 
 @app.route('/search_result', methods=['GET', 'POST'])
 def search_result():

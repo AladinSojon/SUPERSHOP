@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Biscuits</title>
+<title>Profile</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -10,15 +10,6 @@
 <link href="../static/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_styles.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_responsive.css">
-
-<script type="text/javascript">
-   function getvalue(Id) {
-       console.log(Id.innerText);
-       // redirect("/description/"+Id.childNodes[7].innerText);
-       window.location.replace('http://127.0.0.1:5000/'+Id.innerText);
-    }
-
-</script>
 
 <style>
 body{
@@ -73,6 +64,26 @@ body{
 
 
 
+    <style type="text/css">
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 11px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #31a6af;
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 5px #999;
+
+}
+</style>
+
+
+
 </head>
 
 <body>
@@ -80,6 +91,7 @@ body{
 <div class="super_container">
 
 	<!-- Header -->
+
 
 	<header class="header">
 
@@ -171,6 +183,7 @@ body{
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 
+
 							<!-- Cart -->
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
@@ -231,11 +244,13 @@ body{
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
-{#									<li><a href="/super_deal">Super Deals<i class="fas fa-chevron-down"></i></a></li>#}
 
-                                {% if session.logged_in %}
+                                    {% if session.logged_in %}
                                     <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
                                 {%  endif %}
+
+                                    {#									<li><a href="/super_deal">Super Deals<i class="fas fa-chevron-down"></i></a></li>#}
+
 
 									{% if session.username=="Admin" %}
                                 <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
@@ -270,41 +285,190 @@ body{
 
 	</header>
 
-<div id="content">
+     <div id="container">
+        <div>
+        {% block body %}
+        <h1 style= "margin-top: 10px;text-align: center">Profile</h1>
 
-       <center style="padding-top: 10px"><h2>Biscuits</h2></center>
-       <main>
-      <div>
-      {% for d in li %}
-        <a title="Post">
+        <p style="text-align: right">
+            <a href="/edit_profile"><button class="button">Edit Profile</button></a>
+        </p>
 
-			<article  onclick="getvalue(this)">
+        <table style="border-collapse: unset;width: 100%">
+        <tr>
+        <td style="width: 50%;padding-left: 30%;background-color: #0c5460">
+        <figure style="padding-right: 40px">
+        <img src="{{url_for('send_image5',filename=usr_image)}}">
+        </figure>
+        </a>
 
-                {% for row in data[d] %}
-                    {% if row==data[d][0] %}
-                     <p>Id : {{data[d][0]}}</p>
-                     {% elif row==data[d][1] %}
-                     <p>Item Name : {{ data[d][1]}}</p>
-                     {% elif row==data[d][2] %}
-                     <p>Category : {{ data[d][2]}}</p>
-                     {% elif row==data[d][3] %}
-                     <p>Price : {{ data[d][3]}}</p>
-                     {% endif%}
+        <p style="margin-bottom: 4px;font-size: 20px;color: white"> {{session.username}} </p>
+    {% endblock %}
+        </td>
+        <td style="width: 50%; text-align: left;padding-left: 10%;background-color: #17a2b8">
+
+
+                {% for row in data %}
+
+                        <p style="font-size: 20px;color: white">Name: {{row[0]}}</p>
+
+                        <p style="font-size: 20px;color: white">E-mail: {{ row[1]}}</p>
+
+                        <p style="font-size: 20px;color: white">Mobile No: {{ row[2]}}</p>
+
                 {% endfor %}
 
-                <figure>
+        </td>
 
-					<img src="{{url_for('send_image3',filename = img[d-l])}}">
-				</figure>
-
-			</article>
-		</a>
-       {% endfor %}
-		</div>
-		</main>
+        </tr>
+        </table>
     </div>
+</div>
+</div>
+
+<!--
+{#    <div class="page_menu">#}
+{#			<div class="container">#}
+{#				<div class="row">#}
+{#					<div class="col">#}
+{##}
+{#						<div class="page_menu_content">#}
+{##}
+{#							<div class="page_menu_search">#}
+{#								<form action="#">#}
+{#									<input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">#}
+{#								</form>#}
+{#							</div>#}
+{#							<ul class="page_menu_nav">#}
+{#								<li class="page_menu_item has-children">#}
+{#									<a href="#">Language<i class="fa fa-angle-down"></i></a>#}
+{#									<ul class="page_menu_selection">#}
+{#										<li><a href="#">English<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>#}
+{#									</ul>#}
+{#								</li>#}
+{#								<li class="page_menu_item has-children">#}
+{#									<a href="#">Currency<i class="fa fa-angle-down"></i></a>#}
+{#									<ul class="page_menu_selection">#}
+{#										<li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>#}
+{#									</ul>#}
+{#								</li>#}
+{#								<li class="page_menu_item">#}
+{#									<a href="index.html">Home<i class="fa fa-angle-down"></i></a>#}
+{#								</li>#}
+{#								<li class="page_menu_item has-children">#}
+{#									<a href="#">Super Deals<i class="fa fa-angle-down"></i></a>#}
+{#									<ul class="page_menu_selection">#}
+{#										<li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li class="page_menu_item has-children">#}
+{#											<a href="#">Menu Item<i class="fa fa-angle-down"></i></a>#}
+{#											<ul class="page_menu_selection">#}
+{#												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#											</ul>#}
+{#										</li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#									</ul>#}
+{#								</li>#}
+{#								<li class="page_menu_item has-children">#}
+{#									<a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>#}
+{#									<ul class="page_menu_selection">#}
+{#										<li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#									</ul>#}
+{#								</li>#}
+{#								<li class="page_menu_item has-children">#}
+{#									<a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>#}
+{#									<ul class="page_menu_selection">#}
+{#										<li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>#}
+{#									</ul>#}
+{#								</li>#}
+{#								<li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>#}
+{#								<li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>#}
+{#							</ul>#}
+{##}
+{#							<div class="menu_contact">#}
+{#								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570</div>#}
+{#								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
 
 
+
+	<!-- Cart -->
+
+	<!--<div class="cart_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="cart_container">
+						<div class="cart_title">Shopping Cart</div>
+						<div class="cart_items">
+							<ul class="cart_list">
+								<li class="cart_item clearfix">
+									<div class="cart_item_image"><img src="images/shopping_cart.jpg" alt=""></div>
+									<div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+										<div class="cart_item_name cart_info_col">
+											<div class="cart_item_title">Name</div>
+											<div class="cart_item_text">MacBook Air 13</div>
+										</div>
+										<div class="cart_item_color cart_info_col">
+											<div class="cart_item_title">Color</div>
+											<div class="cart_item_text"><span style="background-color:#999999;"></span>Silver</div>
+										</div>
+										<div class="cart_item_quantity cart_info_col">
+											<div class="cart_item_title">Quantity</div>
+											<div class="cart_item_text">1</div>
+										</div>
+										<div class="cart_item_price cart_info_col">
+											<div class="cart_item_title">Price</div>
+											<div class="cart_item_text">$2000</div>
+										</div>
+										<div class="cart_item_total cart_info_col">
+											<div class="cart_item_title">Total</div>
+											<div class="cart_item_text">$2000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Order Total -->
+						<!--<div class="order_total">
+							<div class="order_total_content text-md-right">
+								<div class="order_total_title">Order Total:</div>
+								<div class="order_total_amount">$2000</div>
+							</div>
+						</div>
+
+						<div class="cart_buttons">
+							<button type="button" class="button cart_button_clear">Add to Cart</button>
+							<button type="button" class="button cart_button_checkout">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
 <hr>
 <hr>
 <footer class="footer">
@@ -338,7 +502,8 @@ body{
 		</div>
 	</footer>
 
-</div>
+
+
 
 <script src="../static/js/jquery-3.3.1.min.js"></script>
 <script src="../static/styles/bootstrap4/popper.js"></script>

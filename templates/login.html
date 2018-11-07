@@ -38,8 +38,9 @@
 							</div>
 							<div class="top_bar_user">
                             <div style="padding-right: 20px"><a href="/">Home</a></div>
+
 								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
-								{% if session.logged_in %}
+                                {% if session.logged_in %}
                                 <div><a href="/registertran">Register</a></div>
                                 <div><a href="/logout">Logout</a></div>
                                   {% else %}
