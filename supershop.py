@@ -578,64 +578,81 @@ def contact():
 def update():
     homeId = request.args['query']
     category_id = request.args['query2']
+    itm = request.args['query3']
+
     id_n = homeId.split()
     id_c = category_id.split()
+    itm_c = itm.split()
 
-    print(id_n[2])
+    print("category :"+itm_c[2])
 
-
-    cur = mysql.connection.cursor()
-
-
-    if id_c[2] == 'Life_Style':
-        cur.execute(
-            "SELECT * from life_style_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Drinks':
-        cur.execute(
-            "SELECT * from drinks_table WHERE id = %s", [id_n[2]])
-    elif id_c[2] == 'Chocolate_&_Candies':
-        cur.execute(
-            "SELECT * from chocolate_&_candies_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Meat':
-        cur.execute(
-            "SELECT * from meat_table WHERE id=%s", [id_n[2]])
-
-    elif id_c[2] == 'Home_Care':
-        cur.execute(
-            "SELECT * from home_care_table WHERE id=%s", [id_n[2]])
-
-    elif id_c[2] == 'Biscuits':
-        cur.execute(
-            "SELECT * from biscuits_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Breads':
-        cur.execute(
-            "SELECT * from breads_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Snacks_&_Instants':
-        cur.execute(
-            "SELECT * from snacks_&_instants_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Fruits':
-        cur.execute(
-            "SELECT * from fruits_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Fish':
-        cur.execute(
-            "SELECT * from fish_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Vegetables':
-        cur.execute(
-            "SELECT * from vegetables_table WHERE id=%s", [id_n[2]])
-    elif id_c[2] == 'Baby_Food':
-        cur.execute(
-            "SELECT * from baby_food_table WHERE id=%s", [id_n[2]])
-    g_data = cur.fetchall()
-    print(session['username']);
-    cursor1 = mysql.connection.cursor()
-    cursor1.execute(
-        "INSERT INTO cart_table(Item_Name,Category,price,username) VALUES(%s, %s, %s, %s)",
-        (g_data[0][1], g_data[0][2], g_data[0][3], [session['username']]))
-
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        "SELECT * from cart_table WHERE (Item_Name,username)=(%s,%s)", (itm_c[2],[session['username']]))
+    it_data = cursor.fetchall()
+    ln = len(it_data)
+    print(ln)
     mysql.connection.commit()
+    cursor.close()
 
-    # Close connection
-    cursor1.close()
+    if ln==0:
+
+
+        print(id_n[2])
+        cur = mysql.connection.cursor()
+
+
+        if id_c[2] == 'Life_Style':
+            cur.execute(
+                "SELECT * from life_style_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Drinks':
+            cur.execute(
+                "SELECT * from drinks_table WHERE id = %s", [id_n[2]])
+        elif id_c[2] == 'Chocolate_&_Candies':
+            cur.execute(
+                "SELECT * from chocolate_&_candies_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Meat':
+            cur.execute(
+                "SELECT * from meat_table WHERE id=%s", [id_n[2]])
+
+        elif id_c[2] == 'Home_Care':
+            cur.execute(
+                "SELECT * from home_care_table WHERE id=%s", [id_n[2]])
+
+        elif id_c[2] == 'Biscuits':
+            cur.execute(
+                "SELECT * from biscuits_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Breads':
+            cur.execute(
+                "SELECT * from breads_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Snacks_&_Instants':
+            cur.execute(
+                "SELECT * from snacks_&_instants_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Fruits':
+            cur.execute(
+                "SELECT * from fruits_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Fish':
+            cur.execute(
+                "SELECT * from fish_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Vegetables':
+            cur.execute(
+                "SELECT * from vegetables_table WHERE id=%s", [id_n[2]])
+        elif id_c[2] == 'Baby_Food':
+            cur.execute(
+                "SELECT * from baby_food_table WHERE id=%s", [id_n[2]])
+        g_data = cur.fetchall()
+        print(session['username']);
+        cursor1 = mysql.connection.cursor()
+        cursor1.execute(
+            "INSERT INTO cart_table(Item_Name,Category,price,username) VALUES(%s, %s, %s, %s)",
+            (g_data[0][1], g_data[0][2], g_data[0][3], [session['username']]))
+
+        mysql.connection.commit()
+
+        # Close connection
+        cursor1.close()
+    else:
+        flash('Item Exists','danger')
 
     return "1"
 

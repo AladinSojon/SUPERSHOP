@@ -23,11 +23,15 @@
     };
       // alert(document.getElementById("ID").value);
       x = document.getElementById("Id").innerText;
-      y = document.getElementById("Category").innerText;
+      y = document.getElementById("Categoryy").innerText;
+      z= document.getElementById("Item").innerText;
 
       console.log(x);
-    xhttp.open("GET", "http://127.0.0.1:5000/update?query="+x+"&query2="+y, true);
+    xhttp.open("GET", "http://127.0.0.1:5000/update?query="+x+"&query2="+y+"&query3="+z, true);
     xhttp.send();
+    // m = y.split(" ");
+    //
+    // location.assign("http://127.0.0.1:5000/"+m[2]);
     }
     </script>
 
@@ -326,16 +330,20 @@ body{
 
                 <td style="width: 60%; background-color: #117a8b; text-align: left">
                 <p style="text-align: right">
+
+
              <button class="button" onclick="myvalue()">Add to Cart</button>
+
+
              </p>
 
 
                <center> {% for row in g_data[0] %}
 
                     {% if row==g_data[0][0] %}
-                     <p style="font-size: 20px;color: white">Item_Name : {{g_data[0][0]}}</p>
+                     <p id="Item" style="font-size: 20px;color: white">Item_Name : {{g_data[0][0]}}</p>
                      {% elif row==g_data[0][1] %}
-                     <p id="Category" style="font-size: 20px;color: white">Category : {{g_data[0][1]}}</p>
+                     <p id="Categoryy" style="font-size: 20px;color: white">Category : {{g_data[0][1]}}</p>
                      {% elif row==g_data[0][2] %}
                      <p id="Id" style="font-size: 20px;color: white">Id : {{ g_data[0][2]}}</p>
                      {% elif row==g_data[0][3] %}
