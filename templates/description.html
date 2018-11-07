@@ -24,14 +24,11 @@
       // alert(document.getElementById("ID").value);
       x = document.getElementById("Id").innerText;
       y = document.getElementById("Categoryy").innerText;
-      z= document.getElementById("Item").innerText;
+      z=document.getElementById("Item").innerText;
 
-      console.log(x);
+      console.log(y);
     xhttp.open("GET", "http://127.0.0.1:5000/update?query="+x+"&query2="+y+"&query3="+z, true);
     xhttp.send();
-    // m = y.split(" ");
-    //
-    // location.assign("http://127.0.0.1:5000/"+m[2]);
     }
     </script>
 
@@ -155,7 +152,7 @@ body{
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="#">SuperShop</a></div>
+							<div class="logo"><a href="/">SuperShop</a></div>
 						</div>
 					</div>
 
@@ -164,59 +161,58 @@ body{
 						<div class="header_search">
 							<div class="header_search_content">
 								<div class="header_search_form_container">
-									<form action="#" class="header_search_form clearfix">
-										<input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+									<form action="{{ url_for('search_result') }}" class="header_search_form clearfix" id="upload_form" method="POST">
+										<input type="search" name="Item_Name" required="required" class="header_search_input" value="{{request.form.Item_Name}}" placeholder="Search for products...">
 										<div class="custom_dropdown">
-											<div class="custom_dropdown_list">
-												<span class="custom_dropdown_placeholder clc">All Categories</span>
-												<i class="fas fa-chevron-down"></i>
-												<ul class="custom_list clc">
-													<li><a class="clc" href="#">Life_Style</a></li>
-													<li><a class="clc" href="#">Home_Care</a></li>
-													<li><a class="clc" href="#">Fruits</a></li>
-													<li><a class="clc" href="#">Drinks</a></li>
-													<li><a class="clc" href="#">Biscuits</a></li>
-													<li><a class="clc" href="#">Fish</a></li>
-                                                    <li><a class="clc" href="#">Chocolate_&_Candies</a></li>
-                                                    <li><a class="clc" href="#">Breads</a></li>
-                                                    <li><a class="clc" href="#">Vegetables</a></li>
-                                                    <li><a class="clc" href="#">Meat</a></li>
-                                                    <li><a class="clc" href="#">Snacks_&_Instants</a></li>
-                                                    <li><a class="clc" href="#">Baby_Food</a></li>
-												</ul>
+
+                                            <div class="custom_dropdown_list">
+
+
+                                                <div class="form-group">
+                                                    <select class="form-control" id="Category" name="Category">
+                                                        <option selected>Life_Style</option>
+                                                        <option>Home_Care</option>
+                                                        <option>Fruits</option>
+                                                        <option>Drinks</option>
+                                                        <option>Biscuits</option>
+                                                        <option>Fish</option>
+                                                        <option>Chocolate_&_Candies</option>
+                                                        <option>Breads</option>
+                                                        <option>Vegetables</option>
+                                                        <option>Meat</option>
+                                                        <option>Snacks_&_Instants</option>
+                                                        <option>Baby_Food</option>
+                                                    </select>
+
+                                                </div>
+
 											</div>
+
 										</div>
-										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="../static/images/search.png" alt=""></button>
 									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-
 					<!-- Wishlist -->
 					{% if session.username!="Admin" and session.logged_in%}
 
 
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
-								<div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
-								<div class="wishlist_content">
-									<div class="wishlist_text"><a href="#">Wishlist</a></div>
-									<div class="wishlist_count">115</div>
-								</div>
-							</div>
+
 
 							<!-- Cart -->
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 									<div class="cart_icon">
-										<img src="images/cart.png" alt="">
-										<div class="cart_count"><span>10</span></div>
+										<img src="../static/images/cart.png" alt="">
+										<div class="cart_count"><span></span></div>
 									</div>
 									<div class="cart_content">
 										<div class="cart_text"><a href="/cart">Cart</a></div>
-										<div class="cart_price">$85</div>
+
 									</div>
 								</div>
 							</div>
@@ -246,18 +242,18 @@ body{
 								</div>
 
 								<ul class="cat_menu">
-									<li><a href="#">Life Style <i class="fas fa-chevron-right ml-auto"></i></a></li>
-									<li><a href="#">Home Care<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Life_Style">Life Style <i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<li><a href="/Home_Care">Home Care<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="/Fruits">Fruits<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="/Drinks">Drinks<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Biscuits<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Fish<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Chocolate & Candies<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Breads<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Vegetables<i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="#">Meat<i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="#">Snacks & Instants<i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="#">Baby Food<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Biscuits">Biscuits<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Fish">Fish<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Chocolate_&_Candies">Chocolate & Candies<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Breads">Breads<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="/Vegetables">Vegetables<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="/Meat">Meat<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="/Snacks_&_Instants">Snacks & Instants<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="/Baby_Food">Baby Food<i class="fas fa-chevron-right"></i></a></li>
 								</ul>
 							</div>
 
@@ -267,27 +263,15 @@ body{
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Super Deals<i class="fas fa-chevron-down"></i></a></li>
-
-									<li class="hassubs">
-										<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="/cart">Cart<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
-										</ul>
-									</li>
+                                {% if session.logged_in %}
+                                    <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
+                                {%  endif %}
 
 
 									{% if session.username=="Admin" %}
                                 <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
-                                <li><a href="#">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
+                                <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
                                   {% else %}
-                                <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}
 
@@ -330,11 +314,7 @@ body{
 
                 <td style="width: 60%; background-color: #117a8b; text-align: left">
                 <p style="text-align: right">
-
-
              <button class="button" onclick="myvalue()">Add to Cart</button>
-
-
              </p>
 
 

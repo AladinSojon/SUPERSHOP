@@ -2,9 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da48900f-3c2c-4828-b61d-e5281e4c2445" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Items.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Search.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/Aladin.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/add_super_deal.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/show_feedback.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/EasyHome.iml" afterPath="$PROJECT_DIR$/.idea/EasyHome.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/supershop.py" afterPath="$PROJECT_DIR$/supershop.py" />
+      <change beforePath="$PROJECT_DIR$/images/Mohin.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/supershop1.py" afterPath="$PROJECT_DIR$/supershop1.py" />
+      <change beforePath="$PROJECT_DIR$/templates/Baby_Food.html" afterPath="$PROJECT_DIR$/templates/Baby_Food.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Biscuits.html" afterPath="$PROJECT_DIR$/templates/Biscuits.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Breads.html" afterPath="$PROJECT_DIR$/templates/Breads.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Chocolate_&amp;_Candies.html" afterPath="$PROJECT_DIR$/templates/Chocolate_&amp;_Candies.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Drinks.html" afterPath="$PROJECT_DIR$/templates/Drinks.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Fish.html" afterPath="$PROJECT_DIR$/templates/Fish.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Fruits.html" afterPath="$PROJECT_DIR$/templates/Fruits.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Home_Care.html" afterPath="$PROJECT_DIR$/templates/Home_Care.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Life_Style.html" afterPath="$PROJECT_DIR$/templates/Life_Style.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Meat.html" afterPath="$PROJECT_DIR$/templates/Meat.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Snacks_&amp;_Instants.html" afterPath="$PROJECT_DIR$/templates/Snacks_&amp;_Instants.html" />
+      <change beforePath="$PROJECT_DIR$/templates/Vegetables.html" afterPath="$PROJECT_DIR$/templates/Vegetables.html" />
+      <change beforePath="$PROJECT_DIR$/templates/ad_item.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/templates/add_item.html" afterPath="$PROJECT_DIR$/templates/add_item.html" />
+      <change beforePath="$PROJECT_DIR$/templates/cart.html" afterPath="$PROJECT_DIR$/templates/cart.html" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" afterPath="$PROJECT_DIR$/templates/contact.html" />
+      <change beforePath="$PROJECT_DIR$/templates/create_contest.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/templates/description.html" afterPath="$PROJECT_DIR$/templates/description.html" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_profile.html" afterPath="$PROJECT_DIR$/templates/edit_profile.html" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" afterPath="$PROJECT_DIR$/templates/profile.html" />
+      <change beforePath="$PROJECT_DIR$/templates/registertran.html" afterPath="$PROJECT_DIR$/templates/registertran.html" />
+      <change beforePath="$PROJECT_DIR$/templates/search_result.html" afterPath="$PROJECT_DIR$/templates/search_result.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,18 +46,18 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/EasyHome___Copy$EasyHome.coverage" NAME="EasyHome Coverage Results" MODIFIED="1540547284840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/SUPERSHOP$supershop1.coverage" NAME="supershop1 Coverage Results" MODIFIED="1541493286517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SUPERSHOP$supershop1.coverage" NAME="supershop1 Coverage Results" MODIFIED="1541585263651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SUPERSHOP$EasyHome.coverage" NAME="EasyHome Coverage Results" MODIFIED="1540572379950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/EasyHome$EasyHome.coverage" NAME="EasyHome Coverage Results" MODIFIED="1540362159675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/SUPERSHOP$supershop.coverage" NAME="supershop Coverage Results" MODIFIED="1541582597003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="supershop.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="supershop.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supershop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3961">
-              <caret line="250" column="39" lean-forward="false" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
+            <state relative-caret-position="68">
+              <caret line="253" column="39" lean-forward="true" selection-start-line="253" selection-start-column="39" selection-end-line="253" selection-end-column="39" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1541581472962" expanded="true" signature="2379:2481" ph="INSERT INTO registration_table... " />
@@ -138,7 +169,7 @@
       <file leaf-file-name="edit_profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/edit_profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-431">
+            <state relative-caret-position="663">
               <caret line="39" column="52" lean-forward="false" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
               <folding />
             </state>
@@ -148,12 +179,9 @@
       <file leaf-file-name="cart.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="413" column="61" lean-forward="false" selection-start-line="413" selection-start-column="61" selection-end-line="413" selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="7021">
+              <caret line="413" column="0" lean-forward="false" selection-start-line="413" selection-start-column="0" selection-end-line="413" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,13 +189,9 @@
       <file leaf-file-name="description.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/description.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6531">
+            <state relative-caret-position="476">
               <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#center#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -185,8 +209,8 @@
       <file leaf-file-name="Drinks.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Drinks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="109" column="33" lean-forward="true" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+            <state relative-caret-position="1853">
+              <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -202,68 +226,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supershop1.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="supershop1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supershop1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="1245" column="29" lean-forward="false" selection-start-line="1245" selection-start-column="29" selection-end-line="1245" selection-end-column="29" />
               <folding>
-                <marker date="1541490933921" expanded="true" signature="2269:2371" ph="INSERT INTO registration_table... " />
-                <marker date="1541490933921" expanded="true" signature="2466:2527" ph="SELECT usern... registration_table" />
-                <marker date="1541490933921" expanded="true" signature="4649:4751" ph="INSERT INTO registration_table... " />
-                <marker date="1541490933921" expanded="true" signature="4835:4896" ph="SELECT usern... registration_table" />
-                <marker date="1541490933921" expanded="true" signature="6519:6571" ph="SELECT * FRO... registration_table" />
-                <marker date="1541490933921" expanded="true" signature="7502:7554" ph="SELECT id,It... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="8259:8311" ph="SELECT id,It... fruits_table" />
-                <marker date="1541490933921" expanded="true" signature="9367:9462" ph="INSERT INTO life_style_table" />
-                <marker date="1541490933921" expanded="true" signature="9599:9690" ph="INSERT INTO drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="9842:9946" ph="INSERT INTO chocolate_" />
-                <marker date="1541490933921" expanded="true" signature="10083:10172" ph="INSERT INTO meat_table" />
-                <marker date="1541490933921" expanded="true" signature="10314:10408" ph="INSERT INTO home_care_table" />
-                <marker date="1541490933921" expanded="true" signature="10549:10642" ph="INSERT INTO biscuits_table" />
-                <marker date="1541490933921" expanded="true" signature="10781:10872" ph="INSERT INTO breads_table" />
-                <marker date="1541490933921" expanded="true" signature="11022:11124" ph="INSERT INTO snacks_" />
-                <marker date="1541490933921" expanded="true" signature="11263:11354" ph="INSERT INTO fruits_table" />
-                <marker date="1541490933921" expanded="true" signature="11491:11580" ph="INSERT INTO fish_table" />
-                <marker date="1541490933921" expanded="true" signature="11723:11818" ph="INSERT INTO vegetables_table" />
-                <marker date="1541490933921" expanded="true" signature="11960:12054" ph="INSERT INTO baby_food_table" />
-                <marker date="1541490933921" expanded="true" signature="13549:13619" ph="INSERT INTO feedback" />
-                <marker date="1541490933921" expanded="true" signature="14113:14181" ph="SELECT Item_... life_style_table" />
-                <marker date="1541490933921" expanded="true" signature="14268:14316" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="14432:14496" ph="SELECT Item_... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="14583:14631" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="14760:14824" ph="SELECT Item_... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="14911:14959" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="15073:15135" ph="SELECT Item_... meat_table" />
-                <marker date="1541490933921" expanded="true" signature="15222:15270" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="15389:15456" ph="SELECT Item_... home_care_table" />
-                <marker date="1541490933921" expanded="true" signature="15543:15591" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="15709:15775" ph="SELECT Item_... biscuits_table" />
-                <marker date="1541490933921" expanded="true" signature="15862:15910" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="16026:16090" ph="SELECT Item_... breads_table" />
-                <marker date="1541490933921" expanded="true" signature="16177:16225" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="16352:16427" ph="SELECT Item_... snacks_" />
-                <marker date="1541490933921" expanded="true" signature="16514:16562" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="16678:16742" ph="SELECT Item_... fruits_table" />
-                <marker date="1541490933921" expanded="true" signature="16829:16877" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="16991:17053" ph="SELECT Item_... fish_table" />
-                <marker date="1541490933921" expanded="true" signature="17140:17188" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="17308:17376" ph="SELECT Item_... vegetables_table" />
-                <marker date="1541490933921" expanded="true" signature="17463:17511" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="17630:17697" ph="SELECT Item_... baby_food_table" />
-                <marker date="1541490933921" expanded="true" signature="17784:17832" ph="SELECT descr... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="18325:18414" ph="SELECT Item_... life_style_table" />
-                <marker date="1541490933921" expanded="true" signature="18506:18582" ph="SELECT Item_... drinks_table" />
-                <marker date="1541490933921" expanded="true" signature="18689:18787" ph="SELECT Item_... chocolate_" />
-                <marker date="1541490933921" expanded="true" signature="18878:18961" ph="SELECT Item_... meat_table" />
-                <marker date="1541490933921" expanded="true" signature="19057:19145" ph="SELECT Item_... home_care_table" />
-                <marker date="1541490933921" expanded="true" signature="19240:19327" ph="SELECT Item_... biscuits_table" />
-                <marker date="1541490933921" expanded="true" signature="19420:19505" ph="SELECT Item_... breads_table" />
-                <marker date="1541490933921" expanded="true" signature="19609:19696" ph="SELECT Item_... snacks_" />
-                <marker date="1541490933921" expanded="true" signature="19789:19874" ph="SELECT Item_... fruits_table" />
-                <marker date="1541490933921" expanded="true" signature="19965:20048" ph="SELECT Item_... fish_table" />
-                <marker date="1541490933921" expanded="true" signature="20145:20234" ph="SELECT Item_... vegetables_table" />
-                <marker date="1541490933921" expanded="true" signature="20330:20420" ph="SELECT Item_... baby_fruits_table" />
+                <marker date="1541584987411" expanded="true" signature="2421:2523" ph="INSERT INTO registration_table... " />
+                <marker date="1541584987411" expanded="true" signature="2618:2679" ph="SELECT usern... registration_table" />
+                <marker date="1541584987411" expanded="true" signature="4771:4832" ph="SELECT usern... registration_table" />
+                <marker date="1541584987411" expanded="true" signature="5129:5231" ph="INSERT INTO registration_table... " />
+                <marker date="1541584987411" expanded="true" signature="5323:5384" ph="SELECT usern... registration_table" />
+                <marker date="1541584987411" expanded="true" signature="6980:7045" ph="SELECT Item_... cart_table" />
+                <marker date="1541584987411" expanded="true" signature="7392:7449" ph="DELETE FROM cart_table... " />
+                <marker date="1541584987411" expanded="true" signature="7961:8013" ph="SELECT * FRO... registration_table" />
+                <marker date="1541584987411" expanded="true" signature="8944:8996" ph="SELECT id,It... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="9710:9765" ph="SELECT id,It... baby_food_table" />
+                <marker date="1541584987411" expanded="true" signature="10478:10532" ph="SELECT id,It... biscuits_table" />
+                <marker date="1541584987411" expanded="true" signature="11239:11291" ph="SELECT id,It... breads_table" />
+                <marker date="1541584987411" expanded="true" signature="12005:12061" ph="SELECT id,It... life_style_table" />
+                <marker date="1541584987411" expanded="true" signature="12765:12815" ph="SELECT id,It... meat_table" />
+                <marker date="1541584987411" expanded="true" signature="13526:13582" ph="SELECT id,It... vegetables_table" />
+                <marker date="1541584987411" expanded="true" signature="14302:14354" ph="SELECT id,It... snacks_table" />
+                <marker date="1541584987411" expanded="true" signature="19408:19456" ph="SELECT name,... feedback" />
+                <marker date="1541584987411" expanded="true" signature="20293:20388" ph="INSERT INTO life_style_table" />
+                <marker date="1541584987411" expanded="true" signature="20525:20616" ph="INSERT INTO drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="20768:20872" ph="INSERT INTO chocolate_" />
+                <marker date="1541584987411" expanded="true" signature="21009:21098" ph="INSERT INTO meat_table" />
+                <marker date="1541584987411" expanded="true" signature="21240:21334" ph="INSERT INTO home_care_table" />
+                <marker date="1541584987411" expanded="true" signature="21475:21568" ph="INSERT INTO biscuits_table" />
+                <marker date="1541584987411" expanded="true" signature="21707:21798" ph="INSERT INTO breads_table" />
+                <marker date="1541584987411" expanded="true" signature="21948:22050" ph="INSERT INTO snacks_" />
+                <marker date="1541584987411" expanded="true" signature="22189:22280" ph="INSERT INTO fruits_table" />
+                <marker date="1541584987411" expanded="true" signature="22417:22506" ph="INSERT INTO fish_table" />
+                <marker date="1541584987411" expanded="true" signature="22649:22744" ph="INSERT INTO vegetables_table" />
+                <marker date="1541584987411" expanded="true" signature="22886:22980" ph="INSERT INTO baby_food_table" />
+                <marker date="1541584987411" expanded="true" signature="24473:24543" ph="INSERT INTO feedback" />
+                <marker date="1541584987411" expanded="true" signature="25036:25104" ph="SELECT Item_... life_style_table" />
+                <marker date="1541584987411" expanded="true" signature="25191:25239" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="25355:25419" ph="SELECT Item_... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="25506:25554" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="25683:25747" ph="SELECT Item_... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="25834:25882" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="25996:26058" ph="SELECT Item_... meat_table" />
+                <marker date="1541584987411" expanded="true" signature="26145:26193" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="26312:26379" ph="SELECT Item_... home_care_table" />
+                <marker date="1541584987411" expanded="true" signature="26466:26514" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="26632:26698" ph="SELECT Item_... biscuits_table" />
+                <marker date="1541584987411" expanded="true" signature="26785:26833" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="26949:27013" ph="SELECT Item_... breads_table" />
+                <marker date="1541584987411" expanded="true" signature="27100:27148" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="27275:27350" ph="SELECT Item_... snacks_" />
+                <marker date="1541584987411" expanded="true" signature="27437:27485" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="27601:27665" ph="SELECT Item_... fruits_table" />
+                <marker date="1541584987411" expanded="true" signature="27752:27800" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="27914:27976" ph="SELECT Item_... fish_table" />
+                <marker date="1541584987411" expanded="true" signature="28063:28111" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="28231:28299" ph="SELECT Item_... vegetables_table" />
+                <marker date="1541584987411" expanded="true" signature="28386:28434" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="28553:28620" ph="SELECT Item_... baby_food_table" />
+                <marker date="1541584987411" expanded="true" signature="28707:28755" ph="SELECT descr... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="29271:29332" ph="SELECT * fro... cart_table" />
+                <marker date="1541584987411" expanded="true" signature="29610:29652" ph="SELECT * fro... life_style_table" />
+                <marker date="1541584987411" expanded="true" signature="29742:29782" ph="SELECT * fro... drinks_table" />
+                <marker date="1541584987411" expanded="true" signature="29885:29936" ph="SELECT * fro... chocolate_" />
+                <marker date="1541584987411" expanded="true" signature="30024:30060" ph="SELECT * fro... meat_table" />
+                <marker date="1541584987411" expanded="true" signature="30154:30195" ph="SELECT * fro... home_care_table" />
+                <marker date="1541584987411" expanded="true" signature="30288:30328" ph="SELECT * fro... biscuits_table" />
+                <marker date="1541584987411" expanded="true" signature="30418:30456" ph="SELECT * fro... breads_table" />
+                <marker date="1541584987411" expanded="true" signature="30557:30606" ph="SELECT * fro... snacks_" />
+                <marker date="1541584987411" expanded="true" signature="30696:30734" ph="SELECT * fro... fruits_table" />
+                <marker date="1541584987411" expanded="true" signature="30822:30858" ph="SELECT * fro... fish_table" />
+                <marker date="1541584987411" expanded="true" signature="30952:30994" ph="SELECT * fro... vegetables_table" />
+                <marker date="1541584987411" expanded="true" signature="31087:31128" ph="SELECT * fro... baby_food_table" />
+                <marker date="1541584987411" expanded="true" signature="31292:31372" ph="INSERT INTO cart_table... " />
+                <marker date="1541584987411" expanded="true" signature="31756:31828" ph="SELECT name,... registration_table" />
+                <marker date="1541584987411" expanded="true" signature="32403:32486" ph="UPDATE registration_table... " />
               </folding>
             </state>
           </provider>
@@ -357,6 +395,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,7 +417,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -415,7 +453,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.supershop">
+  <component name="RunManager" selected="Python.supershop1">
     <configuration name="EasyHome" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -480,8 +518,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.supershop" />
-        <item index="1" class="java.lang.String" itemvalue="Python.supershop1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.supershop1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.supershop" />
       </list>
     </recent_temporary>
   </component>
@@ -538,9 +576,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34313726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34313726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23146747" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -662,11 +700,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/Mohin.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/Mohin.jpg" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -674,13 +708,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ad_item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ad_item.html" />
     <entry file="file://$PROJECT_DIR$/templates/Fruits.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -714,18 +742,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/create_contest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/create_contest.html" />
     <entry file="file://$PROJECT_DIR$/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5338">
           <caret line="314" column="17" lean-forward="false" selection-start-line="314" selection-start-column="17" selection-end-line="314" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,74 +782,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supershop1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding>
-            <marker date="1541490933921" expanded="true" signature="2269:2371" ph="INSERT INTO registration_table... " />
-            <marker date="1541490933921" expanded="true" signature="2466:2527" ph="SELECT usern... registration_table" />
-            <marker date="1541490933921" expanded="true" signature="4649:4751" ph="INSERT INTO registration_table... " />
-            <marker date="1541490933921" expanded="true" signature="4835:4896" ph="SELECT usern... registration_table" />
-            <marker date="1541490933921" expanded="true" signature="6519:6571" ph="SELECT * FRO... registration_table" />
-            <marker date="1541490933921" expanded="true" signature="7502:7554" ph="SELECT id,It... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="8259:8311" ph="SELECT id,It... fruits_table" />
-            <marker date="1541490933921" expanded="true" signature="9367:9462" ph="INSERT INTO life_style_table" />
-            <marker date="1541490933921" expanded="true" signature="9599:9690" ph="INSERT INTO drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="9842:9946" ph="INSERT INTO chocolate_" />
-            <marker date="1541490933921" expanded="true" signature="10083:10172" ph="INSERT INTO meat_table" />
-            <marker date="1541490933921" expanded="true" signature="10314:10408" ph="INSERT INTO home_care_table" />
-            <marker date="1541490933921" expanded="true" signature="10549:10642" ph="INSERT INTO biscuits_table" />
-            <marker date="1541490933921" expanded="true" signature="10781:10872" ph="INSERT INTO breads_table" />
-            <marker date="1541490933921" expanded="true" signature="11022:11124" ph="INSERT INTO snacks_" />
-            <marker date="1541490933921" expanded="true" signature="11263:11354" ph="INSERT INTO fruits_table" />
-            <marker date="1541490933921" expanded="true" signature="11491:11580" ph="INSERT INTO fish_table" />
-            <marker date="1541490933921" expanded="true" signature="11723:11818" ph="INSERT INTO vegetables_table" />
-            <marker date="1541490933921" expanded="true" signature="11960:12054" ph="INSERT INTO baby_food_table" />
-            <marker date="1541490933921" expanded="true" signature="13549:13619" ph="INSERT INTO feedback" />
-            <marker date="1541490933921" expanded="true" signature="14113:14181" ph="SELECT Item_... life_style_table" />
-            <marker date="1541490933921" expanded="true" signature="14268:14316" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="14432:14496" ph="SELECT Item_... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="14583:14631" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="14760:14824" ph="SELECT Item_... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="14911:14959" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="15073:15135" ph="SELECT Item_... meat_table" />
-            <marker date="1541490933921" expanded="true" signature="15222:15270" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="15389:15456" ph="SELECT Item_... home_care_table" />
-            <marker date="1541490933921" expanded="true" signature="15543:15591" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="15709:15775" ph="SELECT Item_... biscuits_table" />
-            <marker date="1541490933921" expanded="true" signature="15862:15910" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="16026:16090" ph="SELECT Item_... breads_table" />
-            <marker date="1541490933921" expanded="true" signature="16177:16225" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="16352:16427" ph="SELECT Item_... snacks_" />
-            <marker date="1541490933921" expanded="true" signature="16514:16562" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="16678:16742" ph="SELECT Item_... fruits_table" />
-            <marker date="1541490933921" expanded="true" signature="16829:16877" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="16991:17053" ph="SELECT Item_... fish_table" />
-            <marker date="1541490933921" expanded="true" signature="17140:17188" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="17308:17376" ph="SELECT Item_... vegetables_table" />
-            <marker date="1541490933921" expanded="true" signature="17463:17511" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="17630:17697" ph="SELECT Item_... baby_food_table" />
-            <marker date="1541490933921" expanded="true" signature="17784:17832" ph="SELECT descr... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="18325:18414" ph="SELECT Item_... life_style_table" />
-            <marker date="1541490933921" expanded="true" signature="18506:18582" ph="SELECT Item_... drinks_table" />
-            <marker date="1541490933921" expanded="true" signature="18689:18787" ph="SELECT Item_... chocolate_" />
-            <marker date="1541490933921" expanded="true" signature="18878:18961" ph="SELECT Item_... meat_table" />
-            <marker date="1541490933921" expanded="true" signature="19057:19145" ph="SELECT Item_... home_care_table" />
-            <marker date="1541490933921" expanded="true" signature="19240:19327" ph="SELECT Item_... biscuits_table" />
-            <marker date="1541490933921" expanded="true" signature="19420:19505" ph="SELECT Item_... breads_table" />
-            <marker date="1541490933921" expanded="true" signature="19609:19696" ph="SELECT Item_... snacks_" />
-            <marker date="1541490933921" expanded="true" signature="19789:19874" ph="SELECT Item_... fruits_table" />
-            <marker date="1541490933921" expanded="true" signature="19965:20048" ph="SELECT Item_... fish_table" />
-            <marker date="1541490933921" expanded="true" signature="20145:20234" ph="SELECT Item_... vegetables_table" />
-            <marker date="1541490933921" expanded="true" signature="20330:20420" ph="SELECT Item_... baby_fruits_table" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/edit_profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-431">
+        <state relative-caret-position="663">
           <caret line="39" column="52" lean-forward="false" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
           <folding />
         </state>
@@ -836,24 +792,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="413" column="61" lean-forward="false" selection-start-line="413" selection-start-column="61" selection-end-line="413" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="7021">
+          <caret line="413" column="0" lean-forward="false" selection-start-line="413" selection-start-column="0" selection-end-line="413" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/description.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6531">
+        <state relative-caret-position="476">
           <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#center#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,16 +816,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Drinks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="109" column="33" lean-forward="true" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+        <state relative-caret-position="1853">
+          <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supershop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3961">
-          <caret line="250" column="39" lean-forward="false" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
+        <state relative-caret-position="68">
+          <caret line="253" column="39" lean-forward="true" selection-start-line="253" selection-start-column="39" selection-end-line="253" selection-end-column="39" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1541581472962" expanded="true" signature="2379:2481" ph="INSERT INTO registration_table... " />
@@ -960,6 +909,85 @@
             <marker date="1541581472962" expanded="true" signature="24693:24776" ph="SELECT Item_... fish_table" />
             <marker date="1541581472962" expanded="true" signature="24873:24962" ph="SELECT Item_... vegetables_table" />
             <marker date="1541581472962" expanded="true" signature="25058:25148" ph="SELECT Item_... baby_fruits_table" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supershop1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="1245" column="29" lean-forward="false" selection-start-line="1245" selection-start-column="29" selection-end-line="1245" selection-end-column="29" />
+          <folding>
+            <marker date="1541584987411" expanded="true" signature="2421:2523" ph="INSERT INTO registration_table... " />
+            <marker date="1541584987411" expanded="true" signature="2618:2679" ph="SELECT usern... registration_table" />
+            <marker date="1541584987411" expanded="true" signature="4771:4832" ph="SELECT usern... registration_table" />
+            <marker date="1541584987411" expanded="true" signature="5129:5231" ph="INSERT INTO registration_table... " />
+            <marker date="1541584987411" expanded="true" signature="5323:5384" ph="SELECT usern... registration_table" />
+            <marker date="1541584987411" expanded="true" signature="6980:7045" ph="SELECT Item_... cart_table" />
+            <marker date="1541584987411" expanded="true" signature="7392:7449" ph="DELETE FROM cart_table... " />
+            <marker date="1541584987411" expanded="true" signature="7961:8013" ph="SELECT * FRO... registration_table" />
+            <marker date="1541584987411" expanded="true" signature="8944:8996" ph="SELECT id,It... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="9710:9765" ph="SELECT id,It... baby_food_table" />
+            <marker date="1541584987411" expanded="true" signature="10478:10532" ph="SELECT id,It... biscuits_table" />
+            <marker date="1541584987411" expanded="true" signature="11239:11291" ph="SELECT id,It... breads_table" />
+            <marker date="1541584987411" expanded="true" signature="12005:12061" ph="SELECT id,It... life_style_table" />
+            <marker date="1541584987411" expanded="true" signature="12765:12815" ph="SELECT id,It... meat_table" />
+            <marker date="1541584987411" expanded="true" signature="13526:13582" ph="SELECT id,It... vegetables_table" />
+            <marker date="1541584987411" expanded="true" signature="14302:14354" ph="SELECT id,It... snacks_table" />
+            <marker date="1541584987411" expanded="true" signature="19408:19456" ph="SELECT name,... feedback" />
+            <marker date="1541584987411" expanded="true" signature="20293:20388" ph="INSERT INTO life_style_table" />
+            <marker date="1541584987411" expanded="true" signature="20525:20616" ph="INSERT INTO drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="20768:20872" ph="INSERT INTO chocolate_" />
+            <marker date="1541584987411" expanded="true" signature="21009:21098" ph="INSERT INTO meat_table" />
+            <marker date="1541584987411" expanded="true" signature="21240:21334" ph="INSERT INTO home_care_table" />
+            <marker date="1541584987411" expanded="true" signature="21475:21568" ph="INSERT INTO biscuits_table" />
+            <marker date="1541584987411" expanded="true" signature="21707:21798" ph="INSERT INTO breads_table" />
+            <marker date="1541584987411" expanded="true" signature="21948:22050" ph="INSERT INTO snacks_" />
+            <marker date="1541584987411" expanded="true" signature="22189:22280" ph="INSERT INTO fruits_table" />
+            <marker date="1541584987411" expanded="true" signature="22417:22506" ph="INSERT INTO fish_table" />
+            <marker date="1541584987411" expanded="true" signature="22649:22744" ph="INSERT INTO vegetables_table" />
+            <marker date="1541584987411" expanded="true" signature="22886:22980" ph="INSERT INTO baby_food_table" />
+            <marker date="1541584987411" expanded="true" signature="24473:24543" ph="INSERT INTO feedback" />
+            <marker date="1541584987411" expanded="true" signature="25036:25104" ph="SELECT Item_... life_style_table" />
+            <marker date="1541584987411" expanded="true" signature="25191:25239" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="25355:25419" ph="SELECT Item_... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="25506:25554" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="25683:25747" ph="SELECT Item_... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="25834:25882" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="25996:26058" ph="SELECT Item_... meat_table" />
+            <marker date="1541584987411" expanded="true" signature="26145:26193" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="26312:26379" ph="SELECT Item_... home_care_table" />
+            <marker date="1541584987411" expanded="true" signature="26466:26514" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="26632:26698" ph="SELECT Item_... biscuits_table" />
+            <marker date="1541584987411" expanded="true" signature="26785:26833" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="26949:27013" ph="SELECT Item_... breads_table" />
+            <marker date="1541584987411" expanded="true" signature="27100:27148" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="27275:27350" ph="SELECT Item_... snacks_" />
+            <marker date="1541584987411" expanded="true" signature="27437:27485" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="27601:27665" ph="SELECT Item_... fruits_table" />
+            <marker date="1541584987411" expanded="true" signature="27752:27800" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="27914:27976" ph="SELECT Item_... fish_table" />
+            <marker date="1541584987411" expanded="true" signature="28063:28111" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="28231:28299" ph="SELECT Item_... vegetables_table" />
+            <marker date="1541584987411" expanded="true" signature="28386:28434" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="28553:28620" ph="SELECT Item_... baby_food_table" />
+            <marker date="1541584987411" expanded="true" signature="28707:28755" ph="SELECT descr... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="29271:29332" ph="SELECT * fro... cart_table" />
+            <marker date="1541584987411" expanded="true" signature="29610:29652" ph="SELECT * fro... life_style_table" />
+            <marker date="1541584987411" expanded="true" signature="29742:29782" ph="SELECT * fro... drinks_table" />
+            <marker date="1541584987411" expanded="true" signature="29885:29936" ph="SELECT * fro... chocolate_" />
+            <marker date="1541584987411" expanded="true" signature="30024:30060" ph="SELECT * fro... meat_table" />
+            <marker date="1541584987411" expanded="true" signature="30154:30195" ph="SELECT * fro... home_care_table" />
+            <marker date="1541584987411" expanded="true" signature="30288:30328" ph="SELECT * fro... biscuits_table" />
+            <marker date="1541584987411" expanded="true" signature="30418:30456" ph="SELECT * fro... breads_table" />
+            <marker date="1541584987411" expanded="true" signature="30557:30606" ph="SELECT * fro... snacks_" />
+            <marker date="1541584987411" expanded="true" signature="30696:30734" ph="SELECT * fro... fruits_table" />
+            <marker date="1541584987411" expanded="true" signature="30822:30858" ph="SELECT * fro... fish_table" />
+            <marker date="1541584987411" expanded="true" signature="30952:30994" ph="SELECT * fro... vegetables_table" />
+            <marker date="1541584987411" expanded="true" signature="31087:31128" ph="SELECT * fro... baby_food_table" />
+            <marker date="1541584987411" expanded="true" signature="31292:31372" ph="INSERT INTO cart_table... " />
+            <marker date="1541584987411" expanded="true" signature="31756:31828" ph="SELECT name,... registration_table" />
+            <marker date="1541584987411" expanded="true" signature="32403:32486" ph="UPDATE registration_table... " />
           </folding>
         </state>
       </provider>

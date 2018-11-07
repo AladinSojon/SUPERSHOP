@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Registration</title>
+<title>SuperShop</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="../static/plugins/slick-1.8.0/slick.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/responsive.css">
- <link href='../static/1.css' rel='stylesheet' type="text/css">
+    <link href='../static/1.css' rel='stylesheet' type="text/css">
 
 </head>
 
@@ -32,16 +32,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex flex-row">
-
+						<div class="top_bar_content ml-auto">
+							<div class="top_bar_menu">
 
 							</div>
 							<div class="top_bar_user">
-                            <div style="padding-right: 20px"><a href="/">Home</a></div>
-
-
-
 								<div class="user_icon"><img src="../static/images/user.svg" alt=""></div>
-                                {% if session.logged_in %}
+								{% if session.logged_in %}
                                 <div><a href="/registertran">Register</a></div>
                                 <div><a href="/logout">Logout</a></div>
                                   {% else %}
@@ -57,49 +54,47 @@
 	</div>
 </div>
 
- <div class="container">
-      {% include 'includes/_messages.html' %}
-    </div>
+ <img src="../static/images/image.jpg">
 
-        <img src="../static/images/image.jpg">
 
- <div class="signup-box" style="margin-top: -270px">
+
+
+ <!--gg-->
+
+     <div class="signup-box" style="margin-top: -250px">
         {% block body %}
-  <h1 style="text-align: center">Register</h1>
-  {% from "includes/_formhelpers.html" import render_field %}
-  <form form id="upload-form" action="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.name, class_="form-control")}}
-    </div>
-      <div class="form-group" style="text-align: center">
-      {{render_field(form.username, class_="form-control")}}
-    </div>
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.email, class_="form-control")}}
-    </div>
+        <h1>Add Item</h1>
+          <form class="form-group" id="upload-form" action="{{ url_for('add_super_deal') }}" method="POST" enctype="multipart/form-data">
+            <p>Item Name</p>
+            <input type="text" name="Item_Name" placeholder="Enter Item Name" class="form-control"  value="{{request.form.Item_Name}}">
+              <p>Category</p>
+              <select style="width: 180px;height: 25px;margin-top: 15px" name="Category">
+                  <option>Life_Style</option>
+                  <option>Drinks</option>
+                  <option>Chocolate_&_Candies</option>
+                  <option>Meat</option>
+                  <option>Home_Care</option>
+                  <option>Biscuits</option>
+                  <option>Breads</option>
+                  <option>Snacks_&_Instants</option>
+                  <option>Fruits</option>
+                  <option>Fish</option>
+                  <option>Vegetables</option>
+                  <option>Baby_Food</option>
+              </select>
+              <p>Price</p>
+            <input type="text" name="price" placeholder="Enter Price" class="form-control"  value="{{request.form.price}}">
+              <p style="margin-top: 15px">Description</p>
+            <input type="text" name="description" placeholder="Enter Description" class="form-control"  value="{{request.form.description}}">
 
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.password, class_="form-control")}}
-    </div>
-    <div class="form-group" style="text-align: center">
-      {{render_field(form.confirm, class_="form-control")}}
-    </div>
-      <div class="form-group" style="text-align: center">
-      {{render_field(form.mobileno, class_="form-control")}}
-    </div>
-
-      <div class="form-group" style="text-align: center">
-     <strong>Files:</strong><br>
-       <input id="file-picker" type="file" name="file" accept="image/*" multiple>
-       <div id="msg"></div>
-        </div>
-    <p style="text-align: center"><input type="submit" class="btn btn-primary" value="Submit"></p>
-  </form>
-{% endblock %}
-
+                   <strong>Files:</strong><br>
+                    <input id="file-picker" type="file" name="file" accept="image/*" multiple>
+                    <div id="msg"></div>
+            <input type="submit" name="submit" value="Post" style="margin-top: 15px">
+            </form>
+          {% endblock %}
 
 </div>
-
 <script src="../static/js/jquery-3.3.1.min.js"></script>
 <script src="../static/styles/bootstrap4/popper.js"></script>
 <script src="../static/styles/bootstrap4/bootstrap.min.js"></script>

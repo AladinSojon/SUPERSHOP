@@ -192,7 +192,7 @@ body{
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="#">SuperShop</a></div>
+							<div class="logo"><a href="/">SuperShop</a></div>
 						</div>
 					</div>
 
@@ -245,7 +245,7 @@ body{
 											</div>
 
 										</div>
-										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="../static/images/search.png" alt=""></button>
 									</form>
 								</div>
 							</div>
@@ -258,24 +258,17 @@ body{
 
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
-								<div class="wishlist_icon"><img src="../static/images/heart.png" alt=""></div>
-								<div class="wishlist_content">
-									<div class="wishlist_text"><a href="#">Wishlist</a></div>
-									<div class="wishlist_count">115</div>
-								</div>
-							</div>
+
 
 							<!-- Cart -->
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 									<div class="cart_icon">
 										<img src="../static/images/cart.png" alt="">
-										<div class="cart_count"><span>10</span></div>
+										<div class="cart_count"><span></span></div>
 									</div>
 									<div class="cart_content">
 										<div class="cart_text"><a href="/cart">Cart</a></div>
-										<div class="cart_price">$85</div>
 									</div>
 								</div>
 							</div>
@@ -326,25 +319,14 @@ body{
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Super Deals<i class="fas fa-chevron-down"></i></a></li>
-
-									<li class="hassubs">
-										<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
-										</ul>
-									</li>
+                                {% if session.logged_in %}
+                                    <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
+                                {%  endif %}
 
 
 									{% if session.username=="Admin" %}
                                 <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
-                                <li><a href="#">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
+                                <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
                                   {% else %}
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}
