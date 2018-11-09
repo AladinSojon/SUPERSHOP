@@ -832,6 +832,9 @@ def show_feedback():
 
 
 
+
+
+
 @app.route('/add_item', methods=['GET', 'POST'])
 def add_item():
 
@@ -1433,6 +1436,38 @@ def search_result():
 #
 #         return render_template("search_result.html",data=data, li=li, img=img, l=l)
 #     return render_template("search_result.html")
+
+
+
+
+@app.route('/show_cart', methods = ['GET','POST'])
+def show_cart():
+    if request.method == 'POST':
+        username = request.form['username']
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            "SELECT Item_Name,Category,price,username FROM cart_table where username = %s ",[username])
+        data = cursor.fetchall()
+        x = len(data)
+        if x > 10:
+            l = x - 10
+        else:
+            l = 0
+        print(l)
+        if x > 10:
+            li = range(x - 10, x)
+            li = [*li]
+            li.reverse()
+        else:
+            li = range(0, x)
+            li = [*li]
+            li.reverse()
+
+        return render_template("show_cart.html", data = data, li = li ,l = l)
+    return render_template("show_cart.html")
+
+
+
 
 
 

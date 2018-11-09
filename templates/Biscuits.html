@@ -11,11 +11,12 @@
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_styles.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_responsive.css">
 
+
 <script type="text/javascript">
    function getvalue(Id) {
-       console.log(Id.innerText);
+       console.log(Id);
        // redirect("/description/"+Id.childNodes[7].innerText);
-       window.location.replace('http://127.0.0.1:5000/'+Id.innerText);
+       window.location.replace('http://127.0.0.1:5000/description/'+Id.childNodes[1].innerText+" : "+Id.childNodes[5].innerText);
     }
 
 </script>
@@ -241,6 +242,8 @@ body{
                                 <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
 {#                                        <li><a href="/add_super_deal">Add Super Deal<i class="fas fa-chevron-down"></i></a></li>#}
                                 <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="/show_cart">Show Cart<i class="fas fa-chevron-down"></i></a></li>
+
                                   {% else %}
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}

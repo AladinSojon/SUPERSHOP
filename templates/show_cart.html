@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Meat</title>
+<title>Show Cart</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -130,34 +130,34 @@ body{
 						<div class="header_search">
 							<div class="header_search_content">
 								<div class="header_search_form_container">
-									<form action="{{ url_for('search_result') }}" class="header_search_form clearfix" id="upload_form" method="POST">
-										<input type="search" name="Item_Name" required="required" class="header_search_input" value="{{request.form.Item_Name}}" placeholder="Search for products...">
-										<div class="custom_dropdown">
-
-                                            <div class="custom_dropdown_list">
-
-
-                                                <div class="form-group">
-                                                    <select class="form-control" id="Category" name="Category">
-                                                        <option selected>Life_Style</option>
-                                                        <option>Home_Care</option>
-                                                        <option>Fruits</option>
-                                                        <option>Drinks</option>
-                                                        <option>Biscuits</option>
-                                                        <option>Fish</option>
-                                                        <option>Chocolate_&_Candies</option>
-                                                        <option>Breads</option>
-                                                        <option>Vegetables</option>
-                                                        <option>Meat</option>
-                                                        <option>Snacks_&_Instants</option>
-                                                        <option>Baby_Food</option>
-                                                    </select>
-
-                                                </div>
-
-											</div>
-
-										</div>
+									<form action="{{ url_for('show_cart') }}" class="header_search_form clearfix" id="upload_form" method="POST">
+										<input type="search" name="username" required="required" class="header_search_input" value="{{request.form.username}}" placeholder="Enter Customer ID to search">
+{#										<div class="custom_dropdown">#}
+{##}
+{#                                            <div class="custom_dropdown_list">#}
+{##}
+{##}
+{#                                                <div class="form-group">#}
+{#                                                    <select class="form-control" id="Category" name="Category">#}
+{#                                                        <option selected>Life_Style</option>#}
+{#                                                        <option>Home_Care</option>#}
+{#                                                        <option>Fruits</option>#}
+{#                                                        <option>Drinks</option>#}
+{#                                                        <option>Biscuits</option>#}
+{#                                                        <option>Fish</option>#}
+{#                                                        <option>Chocolate_&_Candies</option>#}
+{#                                                        <option>Breads</option>#}
+{#                                                        <option>Vegetables</option>#}
+{#                                                        <option>Meat</option>#}
+{#                                                        <option>Snacks_&_Instants</option>#}
+{#                                                        <option>Baby_Food</option>#}
+{#                                                    </select>#}
+{##}
+{#                                                </div>#}
+{##}
+{#											</div>#}
+{##}
+{#										</div>#}
 										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="../static/images/search.png" alt=""></button>
 									</form>
 								</div>
@@ -243,7 +243,6 @@ body{
 {#                                        <li><a href="/add_super_deal">Add Super Deal<i class="fas fa-chevron-down"></i></a></li>#}
                                 <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
                                         <li><a href="/show_cart">Show Cart<i class="fas fa-chevron-down"></i></a></li>
-
                                   {% else %}
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}
@@ -272,40 +271,60 @@ body{
 
 	</header>
 
+  <div id="container">
+    <div>
+    <div style="background-color: #9fcdff"><span style="padding-left: 12%;font-size: 22px">Item Name</span><span style="padding-left: 15%;font-size: 22px">Category</span><span style="padding-left:15%;font-size: 22px">Price</span><span style="padding-left: 15%;font-size: 22px">Username</span></div>
+    {% for d in li %}
+        <table style="width: 100%; height: 40px;background-color: grey;margin-top: 10px">
+            <tr >
 
-    <div id="content">
 
-        <center style="padding-top: 10px"><h2>Meat</h2></center>
-       <main>
-      <div>
-      {% for d in li %}
-        <a title="Post">
+                <td style="width: 60%; text-align: left">
+                <p style="text-align: right">
+             </p>
 
-			<article  onclick="getvalue(this)">
-
+                <div style="margin-bottom: 10px">
                 {% for row in data[d] %}
                     {% if row==data[d][0] %}
-                     <p>Id : {{data[d][0]}}</p>
+                     <span style="padding-left: 14%;color: white">{{data[d][0]}}</span>
                      {% elif row==data[d][1] %}
-                     <p>Item Name : {{ data[d][1]}}</p>
+                     <span style="padding-left: 19%;color: white">{{ data[d][1]}}</span>
                      {% elif row==data[d][2] %}
-                     <p>Category : {{ data[d][2]}}</p>
+                     <span style="padding-left: 17%;color: white">{{ data[d][2]}}</span>
                      {% elif row==data[d][3] %}
-                     <p>Price : {{ data[d][3]}}</p>
+                       <span style="padding-left: 17%;color: white">{{ data[d][3]}}</span>
                      {% endif%}
                 {% endfor %}
+                </div>
 
-                <figure>
+                </td>
 
-					<img src="{{url_for('send_image3',filename = img[d-l])}}">
-				</figure>
 
-			</article>
-		</a>
-       {% endfor %}
-		</div>
-		</main>
+            </tr>
+        </table>
+    {% endfor %}
+
     </div>
+
+{#    <div style="width: 100%; margin-top: 5px">#}
+{#        <h1 style="text-align: center; margin-top: 20px"><u>Description</u></h1>#}
+{##}
+{#        <table style="width: 100%; height: 5cm; margin-top: 2px">#}
+{#            <tr >#}
+{#                <td>#}
+{#                 {% for row in des_data[0] %}#}
+{#                    {% if row==des_data[0][0] %}#}
+{#                     <p>{{des_data[0][0]}}</p>#}
+{#                     {% endif%}#}
+{#                {% endfor %}#}
+{##}
+{#                </td>#}
+{##}
+{#            </tr>#}
+{#        </table>#}
+{##}
+{#    </div>#}
+{#</div>#}
 	<!-- Cart -->
 <hr>
 <hr>
@@ -340,6 +359,7 @@ body{
 		</div>
 	</footer>
 
+  </div>
 
 
 
