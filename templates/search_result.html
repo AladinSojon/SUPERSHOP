@@ -13,9 +13,9 @@
 
 <script type="text/javascript">
    function getvalue(Id) {
-       console.log(Id.innerText);
+       console.log(Id);
        // redirect("/description/"+Id.childNodes[7].innerText);
-       window.location.replace('http://127.0.0.1:5000/'+Id.innerText);
+       window.location.replace('http://127.0.0.1:5000/description/'+Id.childNodes[1].innerText+" : "+Id.childNodes[5].innerText);
     }
 
 </script>
@@ -230,10 +230,11 @@ body{
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
-{#									<li><a href="/super_deal">Super Deals<i class="fas fa-chevron-down"></i></a></li>#}
+
 
                                 {% if session.logged_in %}
                                     <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="/notification_page">Notifications<i class="fas fa-chevron-down"></i></a></li>
                                 {%  endif %}
 
 									{% if session.username=="Admin" %}
@@ -241,7 +242,6 @@ body{
 {#                                        <li><a href="/add_super_deal">Add Super Deal<i class="fas fa-chevron-down"></i></a></li>#}
                                 <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
                                         <li><a href="/show_cart">Show Cart<i class="fas fa-chevron-down"></i></a></li>
-
                                   {% else %}
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}
@@ -284,14 +284,14 @@ body{
 			<article  onclick="getvalue(this)">
 
                 {% for row in data[d] %}
-                    {% if row==data[d][0] %}
-                     <p>Item Name : {{data[d][0]}}</p>
+                     {% if row==data[d][0] %}
+                     <p>Id : {{data[d][0]}}</p>
                      {% elif row==data[d][1] %}
-                     <p>Category : {{ data[d][1]}}</p>
+                     <p>Item Name : {{ data[d][1]}}</p>
                      {% elif row==data[d][2] %}
-                     <p>Price : {{ data[d][2]}}</p>
+                     <p>Category : {{ data[d][2]}}</p>
                      {% elif row==data[d][3] %}
-                     <p>Id : {{ data[d][3]}}</p>
+                     <p>Price : {{ data[d][3]}}</p>
                      {% endif%}
                 {% endfor %}
 

@@ -232,11 +232,11 @@ body{
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
-{#									<li><a href="/super_deal">Super Deals<i class="fas fa-chevron-down"></i></a></li>#}
 
 
                                 {% if session.logged_in %}
                                     <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="/notification_page">Notifications<i class="fas fa-chevron-down"></i></a></li>
                                 {%  endif %}
 
 									{% if session.username=="Admin" %}
@@ -244,7 +244,6 @@ body{
 {#                                        <li><a href="/add_super_deal">Add Super Deal<i class="fas fa-chevron-down"></i></a></li>#}
                                 <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
                                         <li><a href="/show_cart">Show Cart<i class="fas fa-chevron-down"></i></a></li>
-
                                   {% else %}
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}

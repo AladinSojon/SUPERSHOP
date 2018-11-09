@@ -1,6 +1,11 @@
 import gc
 import os
 from tkinter import messagebox
+from adapter import *
+from iterator import *
+from Observer import *
+from Search import *
+
 
 
 
@@ -195,6 +200,66 @@ class Items:
         return {'data': data, 'li': li, 'img': img, 'l': l}
 
 
+    def getDrinks(self):
+        print('Drinks')
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            "SELECT id,Item_Name,Category,price from drinks_table")
+
+        data = cursor.fetchall()
+        x = len(data)
+        l=0
+        if x > 6:
+            l = x - 6
+        else:
+            l = 0
+        print(l)
+        if x > 6:
+            li = range(x - 6, x)
+            #li = [*li]
+            rg = range_class(li)
+            lg = range_adapter(rg)
+            li = lg.create_list()
+            li.reverse()
+        else:
+            li = range(0, x)
+     #       li = [*li]
+            rg = range_class(li)
+            lg = range_adapter(rg)
+            li = lg.create_list()
+            li.reverse()
+
+        img = []
+
+        print(li)
+        x = len(li)
+
+        # print(x)
+
+        menu = Menu(li)
+        iterator = menu.getIterator()
+        while iterator.hasNext():
+            item = iterator.Next()
+            b = str(data[item][1]) + ".jpg"
+            print(data[item][1])
+            img.append(b)
+
+        # print(li)
+        # for d in li:
+        #     b = str(data[d][1]) + ".jpg"
+        #     print(data[d][1])
+        #     img.append(b)
+
+        # for c in img:
+        #     print(c)
+
+        img = [*img]
+        img.reverse()
+        print(img)
+        return {'data':data, 'li':li, 'img':img, 'l':l}
+
+
+
 class Facade:
     def __init__(self):
         self.item = Items()
@@ -212,5 +277,10 @@ class Facade:
 
     def home_care(self):
         return self.item.getHomeCare()
+
+    def drinks(self):
+        return self.item.getDrinks()
+
+
 
 

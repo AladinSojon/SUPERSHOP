@@ -1,6 +1,10 @@
 import gc
 import os
 from tkinter import messagebox
+from adapter import *
+from iterator import *
+from Observer import *
+from Items import *
 
 
 
@@ -14,6 +18,8 @@ from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart, connection
 from functools import wraps
 import ctypes
+from abc import ABC
+import abc
 __author__ = 'ibininja'
 
 
@@ -30,9 +36,11 @@ jinja_env = Environment(extensions=['jinja2.ext.loopcontrols'])
 
 
 
-class Subject:
+class Subject(metaclass=abc.ABCMeta):
+
+    @abc.abstractmethod
     def search_result(self):
-        print()
+        pass
 
 
 
@@ -54,46 +62,46 @@ class RealSubject(Subject):
         cur = mysql.connection.cursor()
         if Category == 'Life_Style':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM life_style_table where Item_Name = %s ",
+                "SELECT id,Item_Name,Category,price FROM life_style_table where Item_Name = %s ",
                 [Item_Name])
 
         elif Category == 'Drinks':
             cur.execute(
-                "SELECT Item_Name, Category, price, id FROM drinks_table where Item_Name = %s ", [Item_Name])
+                "SELECT id,Item_Name,Category,price FROM drinks_table where Item_Name = %s ", [Item_Name])
 
         elif Category == 'Chocolate_&_Candies':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM chocolate_table where Item_Name = %s ",
+                "SELECT id,Item_Name,Category,price FROM chocolate_table where Item_Name = %s ",
                 [Item_Name])
         elif Category == 'Meat':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM meat_table where Item_Name = %s ", [Item_Name])
+                "SELECT id,Item_Name,Category,price FROM meat_table where Item_Name = %s ", [Item_Name])
         elif Category == 'Home_Care':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM home_care_table where Item_Name = %s ",
+                "SELECT id,Item_Name,Category,price FROM home_care_table where Item_Name = %s ",
                 [Item_Name])
         elif Category == 'Biscuits':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM biscuits_table where Item_Name = %s ", [Item_Name])
+                "SELECT id,Item_Name,Category,price FROM biscuits_table where Item_Name = %s ", [Item_Name])
         elif Category == 'Breads':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM breads_table where Item_Name = %s ", [Item_Name])
+                "SELECT id,Item_Name,Category,price FROM breads_table where Item_Name = %s ", [Item_Name])
         elif Category == 'Snacks_&_Instants':
             cur.execute(
-                "SELECT Item_Name, Category, price, id FROM snacks_table where Item_Name = %s ", [Item_Name])
+                "SELECT id,Item_Name,Category,price FROM snacks_table where Item_Name = %s ", [Item_Name])
         elif Category == 'Fruits':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM fruits_table where Item_Name = %s ", [Item_Name])
+                "SELECT id,Item_Name,Category,price FROM fruits_table where Item_Name = %s ", [Item_Name])
         elif Category == 'Fish':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM fish_table where Item_Name = %s ", [Item_Name])
+                "SELECT id,Item_Name,Category,price FROM fish_table where Item_Name = %s ", [Item_Name])
         elif Category == 'Vegetables':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM vegetables_table where Item_Name = %s ",
+                "SELECT id,Item_Name,Category,price FROM vegetables_table where Item_Name = %s ",
                 [Item_Name])
         elif Category == 'Baby_Food':
             cur.execute(
-                "SELECT Item_Name, Category, price, description FROM baby_fruits_table where Item_Name = %s ",
+                "SELECT id,Item_Name,Category,price FROM baby_fruits_table where Item_Name = %s ",
                 [Item_Name])
 
         data = cur.fetchall()
@@ -117,8 +125,8 @@ class RealSubject(Subject):
 
         print(li)
         for d in li:
-            b = str(data[d][0]) + ".jpg"
-            print(data[d][0])
+            b = str(data[d][1]) + ".jpg"
+            print(data[d][1])
             img.append(b)
 
         # for c in img:

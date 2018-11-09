@@ -65,12 +65,15 @@
 
  <!--gg-->
 
+
      <div class="signup-box" style="margin-top: -250px">
+         <div style="background-color: brown;color: white">{% include 'includes/_messages.html' %}</div>
+
         {% block body %}
         <h1>Add Item</h1>
           <form class="form-group" id="upload-form" action="{{ url_for('add_item') }}" method="POST" enctype="multipart/form-data">
             <p>Item Name</p>
-            <input type="text" name="Item_Name" placeholder="Enter Item Name" class="form-control"  value="{{request.form.Item_Name}}">
+            <input type="text" name="Item_Name" placeholder="Enter Item Name" class="form-control" required="required" data-error="" value="{{request.form.Item_Name}}">
               <p>Category</p>
               <select style="width: 180px;height: 25px;margin-top: 15px" name="Category">
                   <option>Life_Style</option>
@@ -87,9 +90,9 @@
                   <option>Baby_Food</option>
               </select>
               <p>Price</p>
-            <input type="text" name="price" placeholder="Enter Price" class="form-control"  value="{{request.form.price}}">
+            <input type="text" name="price" placeholder="Enter Price" class="form-control" value="{{request.form.price}}">
               <p style="margin-top: 15px">Description</p>
-            <input type="text" name="description" placeholder="Enter Description" class="form-control"  value="{{request.form.description}}">
+            <input type="text" name="description" placeholder="Enter Description" class="form-control" required="required" data-error="" value="{{request.form.description}}">
 
                    <strong>Files:</strong><br>
                     <input id="file-picker" type="file" name="file" accept="image/*" multiple>

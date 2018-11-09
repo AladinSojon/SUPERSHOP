@@ -3,7 +3,7 @@ import os
 from tkinter import messagebox
 from Search import *
 from Items import *
-
+from User import *
 import MySQLdb
 from flask import Flask, render_template, request, flash, session, redirect, url_for, send_from_directory
 from flask_mysqldb import MySQL
@@ -126,7 +126,7 @@ def is_logged_in(f):
             return f(*args, **kwargs)
         else:
             flash('Unauthorized, Please login', 'danger')
-            return redirect(url_for('logintransparent'))
+            return redirect(url_for('login'))
     return wrap
 
 # Logout
@@ -288,43 +288,43 @@ def login():
 
 
 
-@app.route('/Drinks', methods = ['GET'])
-def Drinks():
-    cursor = mysql.connection.cursor()
-    cursor.execute(
-        "SELECT id,Item_Name,Category,price from drinks_table")
-    data = cursor.fetchall()
-    x = len(data)
-    if x > 6:
-        l = x - 6
-    else:
-        l = 0
-    print(l)
-    if x > 6:
-        li = range(x - 6, x)
-        li = [*li]
-        li.reverse()
-    else:
-        li = range(0, x)
-        li = [*li]
-        li.reverse()
-
-    img = []
-
-    print(li)
-    for d in li:
-        b = str(data[d][1]) + ".jpg"
-        print(data[d][1])
-        img.append(b)
-
-    # for c in img:
-    #     print(c)
-
-    img = [*img]
-    img.reverse()
-    print(img)
-    return render_template("Drinks.html", data = data, li = li,img = img ,l = l)
-
+# @app.route('/Drinks', methods = ['GET'])
+# def Drinks():
+#     cursor = mysql.connection.cursor()
+#     cursor.execute(
+#         "SELECT id,Item_Name,Category,price from drinks_table")
+#     data = cursor.fetchall()
+#     x = len(data)
+#     if x > 6:
+#         l = x - 6
+#     else:
+#         l = 0
+#     print(l)
+#     if x > 6:
+#         li = range(x - 6, x)
+#         li = [*li]
+#         li.reverse()
+#     else:
+#         li = range(0, x)
+#         li = [*li]
+#         li.reverse()
+#
+#     img = []
+#
+#     print(li)
+#     for d in li:
+#         b = str(data[d][1]) + ".jpg"
+#         print(data[d][1])
+#         img.append(b)
+#
+#     # for c in img:
+#     #     print(c)
+#
+#     img = [*img]
+#     img.reverse()
+#     print(img)
+#     return render_template("Drinks.html", data = data, li = li,img = img ,l = l)
+#
 
 
 
@@ -711,6 +711,13 @@ def newFruit():
 
 
 
+@app.route('/Drinks', methods = ['GET'])
+def newDrinks():
+    facade= Facade()
+    list=facade.drinks()
+    return render_template("Drinks.html", data=list['data'], li=list['li'], img=list['img'], l=list['l'])
+
+
 
 #Trying Facade
 #
@@ -845,91 +852,95 @@ def add_item():
         description = request.form['description']
         print(Item_Name)
 
+
+        if(price.replace('.','',1).isdigit()==True):
         # Create cursor
-        cur = mysql.connection.cursor()
+            cur = mysql.connection.cursor()
 
-        # Execute query
-        if Category=='Life_Style':
-            cur.execute(
-                "INSERT INTO  life_style_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category=='Drinks':
-            cur.execute(
-                "INSERT INTO  drinks_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Chocolate_&_Candies':
-            cur.execute(
-                "INSERT INTO  chocolate_&_candies_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Meat':
-            cur.execute(
-                "INSERT INTO  meat_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Home_Care':
-            cur.execute(
-                "INSERT INTO  home_care_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Biscuits':
-            cur.execute(
-                "INSERT INTO  biscuits_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Breads':
-            cur.execute(
-                "INSERT INTO  breads_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Snacks_&_Instants':
-            cur.execute(
-                "INSERT INTO  snacks_&_instants_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Fruits':
-            cur.execute(
-                "INSERT INTO  fruits_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Fish':
-            cur.execute(
-                "INSERT INTO  fish_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Vegetables':
-            cur.execute(
-                "INSERT INTO  vegetables_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
-        elif Category == 'Baby_Food':
-            cur.execute(
-                "INSERT INTO  baby_food_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
-                (Item_Name, Category, price, description))
+            # Execute query
+            if Category=='Life_Style':
+                cur.execute(
+                    "INSERT INTO  life_style_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category=='Drinks':
+                cur.execute(
+                    "INSERT INTO  drinks_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Chocolate_&_Candies':
+                cur.execute(
+                    "INSERT INTO  chocolate_&_candies_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Meat':
+                cur.execute(
+                    "INSERT INTO  meat_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Home_Care':
+                cur.execute(
+                    "INSERT INTO  home_care_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Biscuits':
+                cur.execute(
+                    "INSERT INTO  biscuits_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Breads':
+                cur.execute(
+                    "INSERT INTO  breads_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Snacks_&_Instants':
+                cur.execute(
+                    "INSERT INTO  snacks_&_instants_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Fruits':
+                cur.execute(
+                    "INSERT INTO  fruits_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Fish':
+                cur.execute(
+                    "INSERT INTO  fish_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Vegetables':
+                cur.execute(
+                    "INSERT INTO  vegetables_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
+            elif Category == 'Baby_Food':
+                cur.execute(
+                    "INSERT INTO  baby_food_table ( Item_name, Category, price, description) VALUES(%s, %s, %s, %s)",
+                    (Item_Name, Category, price, description))
 
-       # data = cur.fetchall()
-        #print(data[0][0])
-        Id = str(Item_Name)+".jpg"
-        print(Id)
+           # data = cur.fetchall()
+            #print(data[0][0])
+            Id = str(Item_Name)+".jpg"
+            print(Id)
 
-        target = os.path.join(APP_ROOT, 'images/')
-        # target = os.path.join(APP_ROOT, 'static/')
-        print(target)
-        if not os.path.isdir(target):
-            os.mkdir(target)
+            target = os.path.join(APP_ROOT, 'images/')
+            # target = os.path.join(APP_ROOT, 'static/')
+            print(target)
+            if not os.path.isdir(target):
+                os.mkdir(target)
+            else:
+                print("Couldn't create upload directory: {}".format(target))
+            print(request.files.getlist("file"))
+            for upload in request.files.getlist("file"):
+                print(upload)
+                print("{} is the file name".format(upload.filename))
+                filename = upload.filename
+
+                # Id = request.form['Id']
+                # Id = Id + ".jpg"
+                destination = "/".join([target, Id])
+                print("Accept incoming file:", filename)
+                print("Save it to:", destination)
+                upload.save(destination)
+
+            # Commit to DB
+            mysql.connection.commit()
+
+            # Close connection
+            cur.close()
+
+            return redirect("http://127.0.0.1:5000/")
         else:
-            print("Couldn't create upload directory: {}".format(target))
-        print(request.files.getlist("file"))
-        for upload in request.files.getlist("file"):
-            print(upload)
-            print("{} is the file name".format(upload.filename))
-            filename = upload.filename
-
-            # Id = request.form['Id']
-            # Id = Id + ".jpg"
-            destination = "/".join([target, Id])
-            print("Accept incoming file:", filename)
-            print("Save it to:", destination)
-            upload.save(destination)
-
-        # Commit to DB
-        mysql.connection.commit()
-
-        # Close connection
-        cur.close()
-
-        return redirect("http://127.0.0.1:5000/")
+            flash('Insert Double Value for price','danger')
     return render_template("add_item.html")
 
 
@@ -1440,30 +1451,45 @@ def search_result():
 
 
 
+# @app.route('/show_cart', methods = ['GET','POST'])
+# def show_cart():
+#     if request.method == 'POST':
+#         username = request.form['username']
+#         cursor = mysql.connection.cursor()
+#         cursor.execute(
+#             "SELECT Item_Name,Category,price,username FROM cart_table where username = %s ",[username])
+#         data = cursor.fetchall()
+#         x = len(data)
+#         if x > 10:
+#             l = x - 10
+#         else:
+#             l = 0
+#         print(l)
+#         if x > 10:
+#             li = range(x - 10, x)
+#             li = [*li]
+#             li.reverse()
+#         else:
+#             li = range(0, x)
+#             li = [*li]
+#             li.reverse()
+#
+#         return render_template("show_cart.html", data = data, li = li ,l = l)
+#     return render_template("show_cart.html")
+
+
+###  MEDIATOR
+
 @app.route('/show_cart', methods = ['GET','POST'])
 def show_cart():
     if request.method == 'POST':
         username = request.form['username']
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            "SELECT Item_Name,Category,price,username FROM cart_table where username = %s ",[username])
-        data = cursor.fetchall()
-        x = len(data)
-        if x > 10:
-            l = x - 10
-        else:
-            l = 0
-        print(l)
-        if x > 10:
-            li = range(x - 10, x)
-            li = [*li]
-            li.reverse()
-        else:
-            li = range(0, x)
-            li = [*li]
-            li.reverse()
+        us=User(username)
+        li=us.get_li()
+        l=us.get_l()
+        data=us.get_data()
 
-        return render_template("show_cart.html", data = data, li = li ,l = l)
+        return render_template("show_cart.html", data=data, li=li, l=l)
     return render_template("show_cart.html")
 
 
