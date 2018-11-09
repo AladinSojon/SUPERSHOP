@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="MySQLdb.connection" />
+          <option value="iterator.NameIterator" />
         </list>
       </option>
     </inspection_tool>
