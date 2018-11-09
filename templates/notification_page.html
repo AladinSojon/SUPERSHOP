@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Profile</title>
+<title>Notification</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -10,6 +10,87 @@
 <link href="../static/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_styles.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/cart_responsive.css">
+
+<script type="text/javascript">
+
+
+    // function myvalue() {
+    //     total_cnt=0
+    //      var table = document.getElementById("mytable");
+    //        k=document.getElementById("total");
+    //
+    //      for(var r =0, n = table.rows.length; r < n; r++)
+    //          {
+    //              var x = document.getElementById("cnti"+r).value;
+    //             // console.log(x);
+    //              for(var c=0, m = table.rows[r].cells.length;c<m;c++)
+    //                  {
+    //                      //alert(table.rows[r].cells[c].innerHTML);
+    //                      // y = table.rows[r].cells[c].innerHTML;
+    //                  }
+    //
+    //                  var z = parseFloat(table.rows[r].cells[2].innerHTML);
+    //                  y=document.getElementById("price"+r);
+    //                  y.innerText=x*z;
+    //
+    //                 total_cnt=total_cnt+(x*z);
+    //          }
+    //          k.innerText=total_cnt;
+    //      // var x = document.getElementById("cnti").value;
+    //      // y=document.getElementById("price");
+    //      // z= document.getElementById("unit_price").innerText;
+    //      // y.innerText=x*z;
+    //      // console.log(x);
+    // }
+    //
+    //  function getId(element) {
+    //     //alert("row" + element.parentNode.parentNode.rowIndex + " - column" + element.parentNode.cellIndex);
+    //     x = document.getElementById("item"+element.parentNode.parentNode.rowIndex).innerText;
+    //     console.log(x);
+    //
+    //      var xhttp = new XMLHttpRequest();
+    //   xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //        // Typical action to be performed when the document is ready:
+    //        // document.getElementById("demo").innerHTML = xhttp.responseText;
+    //       }
+    //     };
+    //   // alert(document.getElementById("ID").value);
+    // //
+    // //   console.log(x);
+    // xhttp.open("GET", "http://127.0.0.1:5000/updateee?query="+x,true);
+    // xhttp.send();
+    // }
+
+</script>
+
+
+<style>
+    #loll
+    {
+        margin-left: 4%;
+        margin-right: 4%;
+        width: 92%;
+        margin-top: 130px;
+    }
+    #first
+    {
+        float: left;
+        width: 30%;
+    }
+    #second
+    {
+        float: right;
+        width: 30%;
+    }
+    #tot
+    {
+        width: 92%;
+        float: top;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+</style>
 
 <style>
 body{
@@ -64,26 +145,6 @@ body{
 
 
 
-    <style type="text/css">
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 11px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      outline: none;
-      color: #fff;
-      background-color: #31a6af;
-      border: none;
-      border-radius: 18px;
-      box-shadow: 0 5px #999;
-
-}
-</style>
-
-
-
 </head>
 
 <body>
@@ -91,7 +152,6 @@ body{
 <div class="super_container">
 
 	<!-- Header -->
-
 
 	<header class="header">
 
@@ -146,9 +206,25 @@ body{
 										<div class="custom_dropdown">
 
                                             <div class="custom_dropdown_list">
-
+{#												<span class="custom_dropdown_placeholder clc">All Categories</span>#}
+{#												<i class="fas fa-chevron-down"></i>#}
+{#												<ul class="custom_list clc">#}
+{#													<li><a class="clc" href="#">Life_Style</a></li>#}
+{#													<li><a class="clc" href="#">Home_Care</a></li>#}
+{#													<li><a class="clc" href="#">Fruits</a></li>#}
+{#													<li><a class="clc" href="#">Drinks</a></li>#}
+{#													<li><a class="clc" href="#">Biscuits</a></li>#}
+{#													<li><a class="clc" href="#">Fish</a></li>#}
+{#                                                    <li><a class="clc" href="#">Chocolate_&_Candies</a></li>#}
+{#                                                    <li><a class="clc" href="#">Breads</a></li>#}
+{#                                                    <li><a class="clc" href="#">Vegetables</a></li>#}
+{#                                                    <li><a class="clc" href="#">Meat</a></li>#}
+{#                                                    <li><a class="clc" href="#">Snacks_&_Instants</a></li>#}
+{#                                                    <li><a class="clc" href="#">Baby_Food</a></li>#}
+{#												</ul>#}
 
                                                 <div class="form-group">
+{#                                                    <label class="sr-only" for="rating">Rating for Cafe</label>#}
                                                     <select class="form-control" id="Category" name="Category">
                                                         <option selected>Life_Style</option>
                                                         <option>Home_Care</option>
@@ -160,7 +236,7 @@ body{
                                                         <option>Breads</option>
                                                         <option>Vegetables</option>
                                                         <option>Meat</option>
-                                                        <option>Snacks_&_Instants</option>
+                                                        <option>Snacks_&_Meat</option>
                                                         <option>Baby_Food</option>
                                                     </select>
 
@@ -193,7 +269,6 @@ body{
 									</div>
 									<div class="cart_content">
 										<div class="cart_text"><a href="/cart">Cart</a></div>
-
 									</div>
 								</div>
 							</div>
@@ -244,21 +319,23 @@ body{
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="/">Home<i class="fas fa-chevron-down"></i></a></li>
-
-                                    {% if session.logged_in %}
+                                {% if session.logged_in %}
                                     <li><a href="/profile">My Profile<i class="fas fa-chevron-down"></i></a></li>
                                 {%  endif %}
-
-                                    {#									<li><a href="/super_deal">Super Deals<i class="fas fa-chevron-down"></i></a></li>#}
 
 
 									{% if session.username=="Admin" %}
                                 <li><a href="/add_item">Add Item<i class="fas fa-chevron-down"></i></a></li>
-{#                                        <li><a href="/add_super_deal">Add Super Deal<i class="fas fa-chevron-down"></i></a></li>#}
                                 <li><a href="/show_feedback">Show Feedback<i class="fas fa-chevron-down"></i></a></li>
                                   {% else %}
 								<li><a href="/contact">Contact<i class="fas fa-chevron-down"></i></a></li>
                                  {% endif %}
+
+
+
+
+
+
 						    	</ul>
 							</div>
 
@@ -285,45 +362,38 @@ body{
 
 	</header>
 
-     <div id="container">
-        <div>
-        {% block body %}
-        <h1 style= "margin-top: 10px;text-align: center">Profile</h1>
+        <div id="container">
 
-        <p style="text-align: right">
-            <a href="/edit_profile"><button class="button">Edit Profile</button></a>
-        </p>
+       <center><p style="padding-left: 7%;font-size: 22px">Notifications</p></center>
+       <table id="mytable" style="width: 100%; height: 5cm;background-color: #117a8b; margin-top: 20px;font-size: 22px;color: white">
+        {% for d in li%}
 
-        <table style="border-collapse: unset;width: 100%">
-        <tr>
-        <td style="width: 50%;padding-left: 5%;padding-top: 2%;background-color: #0c5460">
-        <figure>
-        <img src="{{url_for('send_image5',filename=usr_image)}}">
-        </figure>
-
-        <p style="margin-bottom: 4px;font-size: 20px;color: white"> {{session.username}} </p>
-
-        </td>
-         {% endblock %}
-        <td style="width: 50%; text-align: left;padding-left: 10%;background-color: #17a2b8">
+            <tr>
 
 
-                {% for row in data %}
+                <!--<td style="width: 60%">-->
 
-                        <p style="font-size: 20px;color: white">Name: {{row[0]}}</p>
+               {% for row in data[d] %}
 
-                        <p style="font-size: 20px;color: white">E-mail: {{ row[1]}}</p>
+                    <!--<p style="font-size: 20px;color: white">-->
 
-                        <p style="font-size: 20px;color: white">Mobile No: {{ row[2]}}</p>
-
+                     {% if row==data[d][1] %}
+                     <td style="padding-left: 7%">{{data[d][1]}}</td>
+                     {% endif%}
                 {% endfor %}
 
-        </td>
-
-        </tr>
+            </tr>
+         {% endfor %}
         </table>
+
+
+
+
     </div>
 </div>
+
+
+
 </div>
 
 <!--
